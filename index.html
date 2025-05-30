@@ -1875,59 +1875,62 @@
             box-shadow: var(--shadow-magical);
         }
 
-        /* Add these media queries to your existing CSS */
+        /* Add these responsive styles in the <style> section */
 
+        /* Mobile-friendly adjustments */
         @media screen and (max-width: 768px) {
-            /* Canvas size adjustment for certificates */
-            canvas {
-                width: 100%;
-                height: auto;
-            }
-
             /* Typography adjustments */
             h1 {
                 font-size: clamp(2rem, 4vw, 3rem);
             }
 
             h2 {
-                font-size: clamp(1.5rem, 3vw, 2rem);
+                font-size: clamp(1.8rem, 3.5vw, 2.5rem);
             }
 
             /* Container padding */
             .container {
-                padding: 0 15px;
+                padding: var(--container-padding);
+                margin: 0 15px;
             }
 
-            /* Quiz adjustments */
+            /* Quiz section adjustments */
             .quiz-container {
-                width: 95%;
-                margin: 10px auto;
-                padding: 15px;
+                padding: 20px;
+                margin: 10px;
             }
 
-            /* Button sizing */
+            /* Button adjustments */
             button {
                 width: 100%;
-                margin: 5px 0;
-                padding: 12px 20px;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+
+            /* Floating elements adjustments */
+            .floating-elements {
+                display: none; /* Optional: hide floating elements on mobile if they're distracting */
+            }
+
+            /* Custom cursor adjustments */
+            .custom-cursor {
+                display: none; /* Hide custom cursor on mobile */
+            }
+
+            /* Add touch-friendly padding */
+            .clickable, 
+            button, 
+            a {
+                padding: 12px;
+                margin: 8px 0;
             }
         }
 
-        /* Additional adjustments for very small screens */
-        @media screen and (max-width: 480px) {
-            /* Certificate text scaling */
-            canvas {
-                font-size: 14px;
-            }
-
-            /* Spacing adjustments */
-            .section {
-                padding: 40px 0;
-            }
-
-            /* Floating elements adjustment */
-            .floating-elements {
-                display: none; /* Or reduce quantity for better performance */
+        /* Tablet adjustments */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: var(--container-padding);
+                margin: 0 30px;
             }
         }
     </style>
@@ -3182,6 +3185,27 @@
             let content = `
                 <div class="quiz-container">
                     <div class="quiz-progress">
+                        ${currentQuiz.currentQuestion > 0 ? 
+                            `<button onclick="goBackQuestion()" class="back-btn" style="
+                                background: none;
+                                border: none;
+                                color: var(--primary-lavender);
+                                cursor: pointer;
+                                font-family: var(--font-heading);
+                                font-size: 0.9rem;
+                                padding: 8px 12px;
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 6px;
+                                margin-right: 10px;
+                                transition: all 0.3s ease;
+                                opacity: 0.8;
+                                vertical-align: middle;
+                            ">
+                                ← Previous
+                            </button>` 
+                            : ''
+                        }
                         Question ${currentQuiz.currentQuestion + 1} of ${currentQuiz.questionCount}
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: ${progress}%"></div>
@@ -3206,7 +3230,7 @@
             `;
             
             modalBody.innerHTML = content;
-            modal.style.display = 'block'; // Add this line back
+            modal.style.display = 'block';
         }
 
         function selectAnswer(index) {
@@ -3238,6 +3262,11 @@
                 currentQuiz.currentQuestion++;
                 if (currentQuiz.currentQuestion < currentQuiz.questionCount) {
                     showQuestion();
+                    // Add smooth scroll
+                    document.querySelector('.quiz-container').scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 } else {
                     // Add debugging
                     console.log('Quiz finished, calculating results...');
@@ -3363,27 +3392,44 @@
             const name = prompt("Enter your name for the certificate:", "");
             if (!name) return;
 
-            // Make canvas size responsive
-            const canvas = document.createElement('canvas');
-            const isMobile = window.innerWidth < 768;
-            
-            if (isMobile) {
-                canvas.width = window.innerWidth * 0.9; // 90% of screen width
-                canvas.height = (canvas.width * 1.4); // Maintain aspect ratio
-            } else {
-                canvas.width = 1500;
-                canvas.height = 2100;
+            // Get the sign-off message based on archetype
+            let signOffMessage = '';
+            switch (currentQuiz.primaryMatch) {
+                case 'The Timeless Romantic':
+                    signOffMessage = '💌 "You\'ve been officially licensed to fall in love with strangers, sunsets, and your own reflection."';
+                    break;
+                case 'The Grounded Stylist':
+                    signOffMessage = '🪞 "Certified calm, collected, and better dressed than everyone in the group chat."';
+                    break;
+                case 'The Natural Creative':
+                    signOffMessage = '🌿 "You are now legally allowed to call your mess \'an aesthetic.\'"';
+                    break;
+                case 'The Intentional Dresser':
+                    signOffMessage = '📐 "Approved for silent power moves and outfits that could run a boardroom or ruin an ex."';
+                    break;
+                case 'The Sentimental Dreamer':
+                    signOffMessage = '🌙 "Officially qualified to cry over earrings and look stunning doing it."';
+                    break;
+                case 'The Playful Explorer':
+                    signOffMessage = '🎨 "Granted full permission to start trends, ignore rules, and wear glitter like sunscreen."';
+                    break;
+                case 'The Confident Maximalist':
+                    signOffMessage = '💋 "Certified to enter every room like it\'s a runway and an apology is never required."';
+                    break;
+                case 'The Free Spirit':
+                    signOffMessage = '🔥 "Unbothered. Unplanned. Unstoppable. This certificate cannot be revoked."';
+                    break;
+                case 'The Magnetic Minimalist':
+                    signOffMessage = '🖤 "Dangerously understated. This confirms you slay without even trying."';
+                    break;
+                case 'The Visionary Dresser':
+                    signOffMessage = '🧬 "Trend forecaster. Reality bender. Style prophet. Your certificate just caught up to you."';
+                    break;
             }
 
-            // Scale text sizes based on canvas width
-            const scaleFactor = canvas.width / 1500;
-            
-            // Update font sizes
-            const titleSize = Math.floor(95 * scaleFactor);
-            const nameSize = Math.floor(110 * scaleFactor);
-            const subtitleSize = Math.floor(65 * scaleFactor);
-            // ... adjust other font sizes similarly
-
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 1600;
             const ctx = canvas.getContext('2d');
 
             // Get archetype details
@@ -3804,6 +3850,20 @@
             
             return lines.length * lineHeight; // Return total height
         };
+
+        // Add this new function after the existing functions
+        function goBackQuestion() {
+            if (currentQuiz.currentQuestion > 0) {
+                currentQuiz.currentQuestion--;
+                currentQuiz.answers.pop(); // Remove the last answer
+                showQuestion();
+                // Add smooth scroll
+                document.querySelector('.quiz-container').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
     </script>
 </body>
 </html> 
