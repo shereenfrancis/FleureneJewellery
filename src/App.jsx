@@ -10,6 +10,7 @@ import Quiz from './pages/Quiz';
 import Journal from './pages/Journal';
 import Contact from './pages/Contact';
 import Packaging from './pages/Packaging';
+import QuickNav from './components/QuickNav';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/packaging" element={<Packaging />} />
           </Routes>
         </main>
+        <QuickNav />
         <Footer />
       </div>
     </Router>

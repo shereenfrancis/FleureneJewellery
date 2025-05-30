@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero" ref={heroRef}>
+      <section id="hero" className="hero" ref={heroRef}>
         <div className="hero-background">
           <div className="hero-gradient"></div>
         </div>
@@ -72,7 +72,7 @@ const Home = () => {
       </section>
 
       {/* Featured Collections */}
-      <section className="featured-collections fade-in-section">
+      <section id="collections" className="featured-collections fade-in-section">
         <div className="container">
           <div className="section-header">
             <h2>Discover Your Magic</h2>
@@ -123,7 +123,7 @@ const Home = () => {
       </section>
 
       {/* The Fleurene Experience */}
-      <section className="experience fade-in-section" ref={featuresRef}>
+      <section id="experience" className="experience fade-in-section" ref={featuresRef}>
         <div className="container">
           <div className="experience-content">
             <div className="experience-text">
@@ -178,7 +178,7 @@ const Home = () => {
       </section>
 
       {/* Customer Love */}
-      <section className="testimonials fade-in-section">
+      <section id="testimonials" className="testimonials fade-in-section">
         <div className="container">
           <h2>Stories from Our Community</h2>
           
@@ -226,7 +226,7 @@ const Home = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="newsletter fade-in-section">
+      <section id="newsletter" className="newsletter fade-in-section">
         <div className="container">
           <div className="newsletter-content">
             <h2>Join Our Magical Circle</h2>
