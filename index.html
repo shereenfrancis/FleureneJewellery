@@ -1,0 +1,3770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleurene - Jewelry for the Free-Spirited</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Brand Colors */
+            --primary-lilac: #B19CD9;
+            --primary-lavender: #C8A2C8;
+            --primary-mauve: #D4A5A5;
+            --accent-gold: #F4D03F;
+            --accent-peach: #FFCCCB;
+            --accent-sage: #9CAF88;
+            --bg-cream: #FFF8F0;
+            --bg-white: #FFFFFF;
+            --text-dark: #4A4A4A;
+            --text-light: #8B8B8B;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary-lilac) 0%, var(--primary-lavender) 50%, var(--primary-mauve) 100%);
+            --gradient-soft: linear-gradient(135deg, rgba(177, 156, 217, 0.1) 0%, rgba(200, 162, 200, 0.1) 100%);
+            --gradient-hero: linear-gradient(135deg, var(--bg-cream) 0%, rgba(177, 156, 217, 0.05) 100%);
+            --gradient-magical: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing */
+            --section-padding: 80px 0;
+            --container-padding: 0 20px;
+            --border-radius: 12px;
+            
+            /* Shadows */
+            --shadow-soft: 0 8px 32px rgba(177, 156, 217, 0.15);
+            --shadow-hover: 0 12px 48px rgba(177, 156, 217, 0.25);
+            --shadow-magical: 0 0 30px rgba(177, 156, 217, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: var(--bg-cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                45deg,
+                rgba(177, 156, 217, 0.15) 0%,
+                rgba(200, 162, 200, 0.15) 25%,
+                rgba(255, 204, 203, 0.15) 50%,
+                rgba(156, 175, 136, 0.15) 75%,
+                rgba(244, 208, 63, 0.15) 100%
+            );
+            animation: pastelGradient 20s ease infinite;
+            z-index: -1;
+            background-size: 400% 400%;
+            filter: blur(40px);
+        }
+
+        @keyframes pastelGradient {
+            0% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg);
+            }
+            25% {
+                background-position: 50% 100%;
+                filter: hue-rotate(45deg);
+            }
+            50% {
+                background-position: 100% 50%;
+                filter: hue-rotate(90deg);
+            }
+            75% {
+                background-position: 50% 0%;
+                filter: hue-rotate(45deg);
+            }
+            100% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg);
+            }
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 24px;
+            height: 24px;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            font-size: 20px;
+            color: var(--primary-lavender);
+            text-shadow: 0 0 10px rgba(200, 162, 200, 0.6);
+            animation: cursorFloat 3s ease-in-out infinite;
+        }
+
+        .custom-cursor::before {
+            content: '🌸';
+            display: block;
+            filter: hue-rotate(20deg) saturate(1.2);
+        }
+
+        @keyframes cursorFloat {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(10deg) scale(1.1); }
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-lavender);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.8;
+            box-shadow: 0 0 8px var(--primary-lavender);
+            animation: trailFade 0.5s ease-out forwards;
+        }
+
+        @keyframes trailFade {
+            0% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--container-padding);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-petal {
+            position: absolute;
+            top: -50px;
+            font-size: 20px;
+            opacity: 0.6;
+            animation: floatDown linear infinite;
+            pointer-events: none;
+        }
+
+        .floating-butterfly {
+            position: absolute;
+            font-size: 18px;
+            opacity: 0.7;
+            animation: butterflyFly 15s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .floating-heart {
+            position: absolute;
+            font-size: 14px;
+            opacity: 0.5;
+            animation: heartFloat 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatDown {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes butterflyFly {
+            0% {
+                transform: translateX(-100px) translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            25% {
+                transform: translateX(20vw) translateY(80vh) rotate(15deg);
+            }
+            50% {
+                transform: translateX(50vw) translateY(40vh) rotate(-10deg);
+            }
+            75% {
+                transform: translateX(80vw) translateY(20vh) rotate(20deg);
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(110vw) translateY(-50px) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 248, 240, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(177, 156, 217, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 248, 240, 0.98);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 400;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 1.2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-lilac);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-left: 24px;
+        }
+
+        .wishlist-btn,
+        .cart-btn {
+            position: relative;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        .wishlist-btn:hover,
+        .cart-btn:hover {
+            background: rgba(177, 156, 217, 0.1);
+            color: var(--primary-lilac);
+        }
+
+        .wishlist-count,
+        .cart-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent-peach);
+            color: var(--text-dark);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 10px;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-lilac);
+            border: 2px solid var(--primary-lilac);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-lilac);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-hero);
+        }
+
+        .hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(177, 156, 217, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(177, 156, 217, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            margin-bottom: 32px;
+            color: var(--text-light);
+            line-height: 1.6;
+            max-width: 80%;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            position: relative;
+        }
+
+        .hero-text h1::after {
+            content: '✨';
+            position: absolute;
+            font-size: 0.5em;
+            margin-left: 0.5rem;
+            animation: sparkleFloat 3s ease-in-out infinite;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover .hero-img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: sparkleFloat 3s ease-in-out infinite;
+        }
+
+        .sparkle-1 {
+            top: 20%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .sparkle-2 {
+            top: 60%;
+            right: 20%;
+            animation-delay: 1s;
+        }
+
+        .sparkle-3 {
+            bottom: 25%;
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        @keyframes sparkleFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-10px) scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        /* Magic Quote Section */
+        .magic-quote {
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(
+                45deg,
+                rgba(177, 156, 217, 0.9),    /* Lavender */
+                rgba(255, 182, 193, 0.9),    /* Light pink */
+                rgba(173, 216, 230, 0.9),    /* Light blue */
+                rgba(200, 162, 200, 0.9),    /* Soft purple */
+                rgba(255, 218, 185, 0.9),    /* Peach */
+                rgba(176, 224, 230, 0.9),    /* Powder blue */
+                rgba(221, 160, 221, 0.9),    /* Plum */
+                rgba(255, 204, 203, 0.9)     /* Rose */
+            );
+            background-size: 800% 800%;
+            animation: gradientFlow 20s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg) saturate(1);
+            }
+            25% {
+                background-position: 50% 100%;
+                filter: hue-rotate(5deg) saturate(1.1);
+            }
+            50% {
+                background-position: 100% 50%;
+                filter: hue-rotate(10deg) saturate(1.2);
+            }
+            75% {
+                background-position: 50% 0%;
+                filter: hue-rotate(5deg) saturate(1.1);
+            }
+            100% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg) saturate(1);
+            }
+        }
+
+        .quote-text {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-style: italic;
+            color: white;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+        }
+
+        /* Featured Collections */
+        .featured-collections {
+            padding: var(--section-padding);
+            background: var(--bg-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .collection-card {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-magical);
+        }
+
+        .card-image {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .collection-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 40px 24px 24px;
+            transform: translateY(60%);
+            transition: transform 0.3s ease;
+        }
+
+        .collection-card:hover .card-overlay {
+            transform: translateY(0);
+        }
+
+        .card-overlay h3 {
+            margin-bottom: 8px;
+            font-size: 1.5rem;
+        }
+
+        .card-overlay p {
+            margin-bottom: 16px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: var(--section-padding);
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-content h2 {
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .newsletter-content > p {
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 16px;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            background: rgba(255,255,255,0.9);
+            color: var(--text-dark);
+        }
+
+        .newsletter-input::placeholder {
+            color: var(--text-light);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        .newsletter-note {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            background: var(--bg-white);
+            border-top: 1px solid rgba(177, 156, 217, 0.1);
+        }
+
+        .footer p {
+            color: var(--text-light);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 10000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(
+                135deg,
+                rgba(255, 240, 245, 0.97), /* Light pink */
+                rgba(230, 240, 255, 0.97), /* Light blue */
+                rgba(255, 245, 238, 0.97)  /* Light peach */
+            );
+            padding: 40px;
+            border-radius: var(--border-radius);
+            max-width: 900px;
+            width: 95%;
+            text-align: center;
+            box-shadow: var(--shadow-magical);
+            animation: modalAppear 0.3s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes modalAppear {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-lilac);
+        }
+
+        .modal h3 {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .modal p {
+            margin-bottom: 15px;
+        }
+
+        .modal label {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal label:hover {
+            color: var(--primary-lilac);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Add these styles */
+        .magical-hover {
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .magical-hover::before {
+            content: '✨';
+            position: absolute;
+            opacity: 0;
+            font-size: 1.2em;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .magical-hover:hover {
+            transform: translateY(-3px);
+        }
+
+        .magical-hover:hover::before {
+            opacity: 1;
+            top: -25px;
+            animation: sparkleFloat 1s ease infinite;
+        }
+
+        @keyframes sparkleFloat {
+            0%, 100% { transform: translateX(-50%) rotate(0deg); }
+            50% { transform: translateX(-50%) rotate(15deg); }
+        }
+
+        /* Add a dreamy text glow effect */
+        .hero-title, h2, h3 {
+            text-shadow: 0 0 30px rgba(177, 156, 217, 0.3);
+            transition: text-shadow 0.3s ease;
+        }
+
+        .hero-title:hover, h2:hover, h3:hover {
+            text-shadow: 0 0 40px rgba(177, 156, 217, 0.5);
+        }
+
+        /* Add magical card effects */
+        .collection-card {
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .collection-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(177, 156, 217, 0.2), 
+                rgba(255, 255, 255, 0.1), 
+                rgba(200, 162, 200, 0.2)
+            );
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 
+                0 15px 35px rgba(177, 156, 217, 0.2),
+                0 0 50px rgba(177, 156, 217, 0.1);
+        }
+
+        .collection-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Add dreamy button effects */
+        .btn {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover::after {
+            animation: shimmerEffect 1.5s ease;
+        }
+
+        @keyframes shimmerEffect {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* Add magical orbs background */
+        .magical-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.4;
+            animation: orbFloat 20s infinite;
+            mix-blend-mode: soft-light;
+        }
+
+        .orb-1 {
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(177, 156, 217, 0.4); /* Lavender */
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            top: 60%;
+            right: 15%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 182, 193, 0.4); /* Pink */
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            bottom: 10%;
+            left: 20%;
+            width: 350px;
+            height: 350px;
+            background: rgba(173, 216, 230, 0.4); /* Light blue */
+            animation-delay: -10s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(50px, -30px) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 50px) scale(0.9);
+            }
+            75% {
+                transform: translate(-40px, -20px) scale(1.05);
+            }
+        }
+
+        .magical-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .magical-text::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--primary-lavender),
+                var(--primary-mauve),
+                var(--accent-peach),
+                transparent
+            );
+            background-size: 200% 100%;
+            animation: shimmerLine 3s infinite;
+        }
+
+        @keyframes shimmerLine {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Add new style for the animated tagline */
+        .hero-tagline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 300;
+            background: linear-gradient(
+                45deg,
+                var(--primary-lilac),
+                var(--primary-lavender),
+                var(--primary-mauve),
+                var(--accent-peach)
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 8s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .quiz-section {
+            padding: var(--section-padding);
+            background: linear-gradient(
+                135deg,
+                rgba(177, 156, 217, 0.1),
+                rgba(200, 162, 200, 0.1),
+                rgba(255, 204, 203, 0.1)
+            );
+        }
+
+        .quiz-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quiz-length-selector {
+            margin-top: 40px;
+        }
+
+        .quiz-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-quiz {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: var(--bg-white);
+            border: 1px solid rgba(177, 156, 217, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-quiz:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-magical);
+            border-color: var(--primary-lavender);
+        }
+
+        .btn-quiz span {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--primary-lavender);
+        }
+
+        .btn-quiz small {
+            color: var(--text-light);
+        }
+
+        /* Update the quiz section styles */
+        .quiz-container {
+            text-align: left;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 24px;
+            box-shadow: 
+                0 8px 32px rgba(177, 156, 217, 0.15),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .question-text {
+            font-size: 1.4rem;
+            margin: 24px 0;
+            color: var(--text-dark);
+            font-family: var(--font-heading);
+            text-align: center;
+        }
+
+        .options-container {
+            display: grid;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .quiz-option {
+            width: 100%;
+            padding: 1.5rem;
+            margin: 0.8rem 0;
+            border: none;
+            border-radius: var(--border-radius);
+            background: var(--bg-white);
+            color: var(--text-dark);
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .quiz-option:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .quiz-option::before {
+            content: '🌸';
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover::before {
+            opacity: 0.8;
+        }
+
+        .option-emoji {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .quiz-option p {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            flex-grow: 1;
+        }
+
+        .quiz-option small {
+            color: var(--primary-lavender);
+            font-style: italic;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .quiz-progress {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-lavender);
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(177, 156, 217, 0.2);
+            border-radius: 3px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-lavender);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .result-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .result-emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .result-title {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .essence-card, .born-with, .mood-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1.5rem;
+        }
+
+        .tagline {
+            font-style: italic;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--primary-lavender);
+        }
+
+        .born-with ul, .core-beliefs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .born-with li, .core-beliefs li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .born-with li:before, .core-beliefs li:before {
+            content: '✧';
+            position: absolute;
+            left: 0;
+            color: var(--primary-lavender);
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Add these styles to the existing <style> section */
+        .result-container {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-magical);
+        }
+
+        .result-container h3 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: var(--gradient-magical);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .result-header {
+            position: relative;
+            padding: 2rem;
+            margin: -2rem -2rem 2rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            overflow: hidden;
+        }
+
+        .result-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        /* Custom background colors for each archetype */
+        [data-archetype="The Timeless Romantic"] .result-header::before {
+            background: linear-gradient(135deg, #FFE4E1, #E6E6FA);
+        }
+
+        [data-archetype="The Grounded Stylist"] .result-header::before {
+            background: linear-gradient(135deg, #F5F5DC, #E8F5E9);
+        }
+
+        [data-archetype="The Natural Creative"] .result-header::before {
+            background: linear-gradient(135deg, #F0F4E3, #E6EFE9);
+        }
+
+        [data-archetype="The Intentional Dresser"] .result-header::before {
+            background: linear-gradient(135deg, #F5F5F5, #EFEBE9);
+        }
+
+        [data-archetype="The Sentimental Dreamer"] .result-header::before {
+            background: linear-gradient(135deg, #E8EAF6, #EDE7F6);
+        }
+
+        [data-archetype="The Playful Explorer"] .result-header::before {
+            background: linear-gradient(135deg, #FFE0B2, #F8BBD0);
+        }
+
+        [data-archetype="The Confident Maximalist"] .result-header::before {
+            background: linear-gradient(135deg, #FFD700, #FF69B4);
+        }
+
+        [data-archetype="The Free Spirit"] .result-header::before {
+            background: linear-gradient(135deg, #FFE0B2, #FFCCBC);
+        }
+
+        [data-archetype="The Magnetic Minimalist"] .result-header::before {
+            background: linear-gradient(135deg, #ECEFF1, #CFD8DC);
+        }
+
+        [data-archetype="The Visionary Dresser"] .result-header::before {
+            background: linear-gradient(135deg, #E1BEE7, #B2EBF2);
+        }
+
+        .result-emoji {
+            font-size: 4.5rem;
+            display: block;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .result-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .risk-type {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .result-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 2rem 0;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab-btn::before {
+            content: '🌸';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover::before {
+            left: 10px;
+            opacity: 1;
+        }
+
+        .tab-btn:hover {
+            padding-left: 2.5rem;
+        }
+
+        .tab-btn.active {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .essence-card, .born-with, .mood-card, .wild-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .essence-card::before, .born-with::before, .mood-card::before, .wild-card::before {
+            content: '🌸';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 4rem;
+            opacity: 0.1;
+            transform: rotate(45deg);
+        }
+
+        .tagline {
+            font-family: var(--font-heading);
+            font-style: italic;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--primary-lavender);
+            font-size: 1.2rem;
+        }
+
+        .born-with ul, .core-beliefs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .born-with li, .core-beliefs li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .born-with li:before, .core-beliefs li:before {
+            content: '🌸';
+            position: absolute;
+            left: 0;
+            transform: scale(0.8);
+            color: var(--primary-lavender);
+        }
+
+        .vibe-tag {
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: var(--primary-lavender);
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '🌸';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover::before {
+            left: 10px;
+            opacity: 1;
+        }
+
+        .btn:hover {
+            padding-left: 3rem;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--gradient-soft);
+            color: var(--text-dark);
+        }
+
+        /* Pastel colors for each archetype's answers */
+        .quiz-option[data-archetype="The Timeless Romantic"]:hover,
+        .quiz-option[data-archetype="The Timeless Romantic"].selected {
+            background: linear-gradient(135deg, #FFE4E1, #E6E6FA);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 228, 225, 0.4);
+        }
+
+        .quiz-option[data-archetype="The Grounded Stylist"]:hover,
+        .quiz-option[data-archetype="The Grounded Stylist"].selected {
+            background: linear-gradient(135deg, #F5F5DC, #E8F5E9);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(245, 245, 220, 0.4);
+        }
+
+        .quiz-option[data-archetype="The Natural Creative"]:hover,
+        .quiz-option[data-archetype="The Natural Creative"].selected {
+            background: linear-gradient(135deg, #F0F4E3, #E6EFE9);
+        }
+
+        .quiz-option[data-archetype="The Intentional Dresser"]:hover,
+        .quiz-option[data-archetype="The Intentional Dresser"].selected {
+            background: linear-gradient(135deg, #F5F5F5, #EFEBE9);
+        }
+
+        .quiz-option[data-archetype="The Sentimental Dreamer"]:hover,
+        .quiz-option[data-archetype="The Sentimental Dreamer"].selected {
+            background: linear-gradient(135deg, #E8EAF6, #EDE7F6);
+        }
+
+        .quiz-option[data-archetype="The Playful Explorer"]:hover,
+        .quiz-option[data-archetype="The Playful Explorer"].selected {
+            background: linear-gradient(135deg, #FFE0B2, #F8BBD0);
+        }
+
+        .quiz-option[data-archetype="The Confident Maximalist"]:hover,
+        .quiz-option[data-archetype="The Confident Maximalist"].selected {
+            background: linear-gradient(135deg, #FFD700, #FF69B4);
+            opacity: 0.7;
+        }
+
+        .quiz-option[data-archetype="The Free Spirit"]:hover,
+        .quiz-option[data-archetype="The Free Spirit"].selected {
+            background: linear-gradient(135deg, #FFE0B2, #FFCCBC);
+        }
+
+        .quiz-option[data-archetype="The Magnetic Minimalist"]:hover,
+        .quiz-option[data-archetype="The Magnetic Minimalist"].selected {
+            background: linear-gradient(135deg, #ECEFF1, #CFD8DC);
+        }
+
+        .quiz-option[data-archetype="The Visionary Dresser"]:hover,
+        .quiz-option[data-archetype="The Visionary Dresser"].selected {
+            background: linear-gradient(135deg, #E1BEE7, #B2EBF2);
+        }
+
+        /* Add these styles to make each archetype option show its unique pastel color on hover */
+        .quiz-option[data-archetype="Timeless Romantic"]:hover {
+            background: linear-gradient(135deg, #FFE4E1, #E6E6FA);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 228, 225, 0.4);
+        }
+
+        .quiz-option[data-archetype="Grounded Stylist"]:hover {
+            background: linear-gradient(135deg, #F5F5DC, #E8F5E9);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(245, 245, 220, 0.4);
+        }
+
+        .quiz-option[data-archetype="Natural Creative"]:hover {
+            background: linear-gradient(135deg, #F0F4E3, #E6EFE9);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(240, 244, 227, 0.4);
+        }
+
+        .quiz-option[data-archetype="Intentional Dresser"]:hover {
+            background: linear-gradient(135deg, #F5F5F5, #EFEBE9);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(245, 245, 245, 0.4);
+        }
+
+        .quiz-option[data-archetype="Sentimental Dreamer"]:hover {
+            background: linear-gradient(135deg, #E8EAF6, #EDE7F6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(232, 234, 246, 0.4);
+        }
+
+        .quiz-option[data-archetype="Playful Explorer"]:hover {
+            background: linear-gradient(135deg, #FFE0B2, #F8BBD0);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 224, 178, 0.4);
+        }
+
+        .quiz-option[data-archetype="Confident Maximalist"]:hover {
+            background: linear-gradient(135deg, #FFD700, #FF69B4);
+            opacity: 0.7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .quiz-option[data-archetype="Free Spirit"]:hover {
+            background: linear-gradient(135deg, #FFE0B2, #FFCCBC);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 224, 178, 0.4);
+        }
+
+        .quiz-option[data-archetype="Magnetic Minimalist"]:hover {
+            background: linear-gradient(135deg, #ECEFF1, #CFD8DC);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(236, 239, 241, 0.4);
+        }
+
+        .quiz-option[data-archetype="Visionary Dresser"]:hover {
+            background: linear-gradient(135deg, #E1BEE7, #B2EBF2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(225, 190, 231, 0.4);
+        }
+
+        /* Add these styles for the matches display */
+        .matches-container {
+            padding: 2rem;
+        }
+
+        .match-card {
+            background: var(--bg-white);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .match-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .percentage-bar {
+            background: rgba(177, 156, 217, 0.1);
+            height: 24px;
+            border-radius: 12px;
+            margin-top: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .percentage-fill {
+            background: var(--gradient-primary);
+            height: 100%;
+            border-radius: 12px;
+            transition: width 1s ease-out;
+        }
+
+        .percentage-bar span {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Certificate styles */
+        .certificate-preview {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            box-shadow: var(--shadow-magical);
+            border-radius: var(--border-radius);
+        }
+
+        .btn-download {
+            background: var(--gradient-magical);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-magical);
+        }
+    </style>
+</head>
+<body>
+    <!-- Magical Orbs Background -->
+    <div class="magical-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <span class="logo-text">Fleurene</span>
+                    <span class="logo-tagline">✨</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Shop</a>
+                    <a href="#" class="nav-link">The Story</a>
+                    <a href="#quiz-section" class="nav-link" onclick="scrollToQuiz(event)">Find Your Vibe</a>
+                    <a href="#" class="nav-link">Journal</a>
+                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">Gifting</a>
+                    
+                    <div class="nav-actions">
+                        <button class="wishlist-btn" title="My Treasure Box" onclick="showModal('wishlist')">
+                            <span class="heart-icon">♡</span>
+                            <span class="wishlist-count">3</span>
+                        </button>
+                        <button class="cart-btn" title="Shopping Bag" onclick="showModal('cart')">
+                            <span class="bag-icon">🛍️</span>
+                            <span class="cart-count">2</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-tagline">Jewelry for the free-spirited</h1>
+                    <p class="hero-subtitle">
+                        Crafted to express your quiet magic. Each piece tells a story of dreams, 
+                        wildflowers, and the beautiful moments that make you uniquely you.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary" onclick="showModal('collection', 'Shop')">
+                            Explore Your Story in Beads
+                        </a>
+                        <a href="#quiz-section" class="btn btn-secondary" onclick="scrollToQuiz(event)">
+                            Find Your Vibe
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img 
+                            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=700&fit=crop&crop=center" 
+                            alt="Delicate bracelet sparkling in dappled sunlight"
+                            class="hero-img"
+                        />
+                        <div class="image-overlay">
+                            <div class="sparkle sparkle-1">✨</div>
+                            <div class="sparkle sparkle-2">✨</div>
+                            <div class="sparkle sparkle-3">✨</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magic Quote -->
+    <section class="magic-quote">
+        <div class="container">
+            <div class="quote-content">
+                <p class="quote-text">"She believed she could, so she did... with a little magic on her wrist"</p>
+                <p class="quote-author">— The Fleurene Philosophy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="magical-text">Discover Your Magic</h2>
+                <p>Each collection captures a different facet of your beautiful spirit</p>
+            </div>
+            
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=500&fit=crop&crop=center" alt="Wildflower Dreams Collection" />
+                        <div class="card-overlay">
+                            <h3 class="magical-text">Wildflower Dreams</h3>
+                            <p>For the free spirit who dances with nature</p>
+                            <a href="#" class="btn btn-primary" onclick="showModal('collection', 'Wildflower Dreams')">
+                                Explore Collection
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1544376664-80b17f09d399?w=400&h=500&fit=crop&crop=center" alt="Moonlit Whispers Collection" />
+                        <div class="card-overlay">
+                            <h3 class="magical-text">Moonlit Whispers</h3>
+                            <p>Delicate pieces for quiet moments of reflection</p>
+                            <a href="#" class="btn btn-primary" onclick="showModal('collection', 'Moonlit Whispers')">
+                                Explore Collection
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&h=500&fit=crop&crop=center" alt="Golden Hour Collection" />
+                        <div class="card-overlay">
+                            <h3 class="magical-text">Golden Hour</h3>
+                            <p>Warm, radiant pieces that capture life's magic</p>
+                            <a href="#" class="btn btn-primary" onclick="showModal('collection', 'Golden Hour')">
+                                Explore Collection
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Magical Circle</h2>
+                <p>Be the first to discover new collections, get styling tips, and receive your personal jewelry personality reading</p>
+                
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email for a touch of magic"
+                        class="newsletter-input"
+                        required
+                    />
+                    <button type="submit" class="btn btn-primary">
+                        Get My Reading ✨
+                    </button>
+                </form>
+                
+                <p class="newsletter-note">
+                    Plus, enjoy 15% off your first order and exclusive access to limited collections
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz-section">
+        <div class="container">
+            <div class="quiz-intro">
+                <h2 class="magical-text">Find Your Jewelry Personality</h2>
+                <p>Discover your unique style archetype through our magical quiz</p>
+                
+                <div class="quiz-length-selector">
+                    <h3>Choose Your Journey Length</h3>
+                    <div class="quiz-options">
+                        <button class="btn btn-quiz" onclick="startQuiz(10)">
+                            <span>Quick Magic</span>
+                            <small>10 Questions</small>
+                        </button>
+                        <button class="btn btn-quiz" onclick="startQuiz(20)">
+                            <span>Deep Dive</span>
+                            <small>20 Questions</small>
+                        </button>
+                        <button class="btn btn-quiz" onclick="startQuiz(30)">
+                            <span>Full Journey</span>
+                            <small>30 Questions</small>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Fleurene. Made with ✨ and 💜</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div id="modal-body">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        const trails = [];
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = (e.clientX - 12) + 'px';
+            cursor.style.top = (e.clientY - 12) + 'px';
+            
+            // Create trail every few pixels moved
+            if (Math.random() > 0.7) {
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                trail.style.left = (e.clientX - 4) + 'px';
+                trail.style.top = (e.clientY - 4) + 'px';
+                document.body.appendChild(trail);
+                
+                trails.push(trail);
+                
+                setTimeout(() => {
+                    if (trail.parentNode) {
+                        trail.remove();
+                    }
+                    trails.shift();
+                }, 500);
+            }
+        });
+
+        // Floating elements
+        function createFloatingElement(type) {
+            const element = document.createElement('div');
+            const emojis = {
+                petal: ['🌸', '🌺', '🌼', '🌻'],
+                butterfly: ['🦋', '🦋', '🦋'],
+                heart: ['💜', '💖', '💕', '💗']
+            };
+            
+            element.className = `floating-${type}`;
+            element.innerHTML = emojis[type][Math.floor(Math.random() * emojis[type].length)];
+            element.style.left = Math.random() * 100 + '%';
+            element.style.animationDuration = (8 + Math.random() * 4) + 's';
+            element.style.animationDelay = Math.random() * 2 + 's';
+            element.style.transform = `scale(${0.5 + Math.random() * 0.5})`;
+            
+            if (type === 'butterfly' || type === 'heart') {
+                element.style.top = Math.random() * 100 + '%';
+                element.style.position = 'fixed';
+            }
+            
+            document.getElementById('floatingElements').appendChild(element);
+            
+            setTimeout(() => {
+                if (element.parentNode) {
+                    element.parentNode.removeChild(element);
+                }
+            }, 15000);
+        }
+
+        // Create initial floating elements
+        for (let i = 0; i < 6; i++) {
+            setTimeout(() => createFloatingElement('petal'), i * 500);
+        }
+        
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => createFloatingElement('butterfly'), i * 2000);
+        }
+        
+        for (let i = 0; i < 4; i++) {
+            setTimeout(() => createFloatingElement('heart'), i * 2000);
+        }
+
+        // Continue creating elements
+        setInterval(() => createFloatingElement('petal'), 3000);
+        setInterval(() => createFloatingElement('butterfly'), 8000);
+        setInterval(() => createFloatingElement('heart'), 6000);
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Modal functions
+        function showModal(type, data = null) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            let content = '';
+            
+            switch(type) {
+                case 'wishlist':
+                    content = `
+                        <h3>✨ My Treasure Box</h3>
+                        <p>Your wishlist is where dreams come to sparkle! 💜</p>
+                        <div style="margin: 20px 0;">
+                            <p>🌸 Wildflower Dreams Bracelet</p>
+                            <p>✨ Moonlit Whispers Necklace</p>
+                            <p>💫 Golden Hour Ring</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="closeModal()">Continue Dreaming</button>
+                    `;
+                    break;
+                case 'cart':
+                    content = `
+                        <h3>🛍️ Your Magical Cart</h3>
+                        <p>Ready to make some magic yours? ✨</p>
+                        <div style="margin: 20px 0;">
+                            <p>🌺 Dreamer's Delight Bracelet - $45</p>
+                            <p>🌙 Midnight Magic Earrings - $35</p>
+                            <hr style="margin: 10px 0; border: 1px solid var(--primary-lilac);">
+                            <p><strong>Total: $80 ✨</strong></p>
+                        </div>
+                        <button class="btn btn-primary" onclick="closeModal()">Checkout Magic</button>
+                    `;
+                    break;
+                case 'quiz':
+                    scrollToQuiz(event);
+                    return;
+                case 'collection':
+                    content = `
+                        <h3>✨ ${data} Collection</h3>
+                        <p>Step into a world of ${data.toLowerCase()} magic...</p>
+                        <div style="margin: 20px 0;">
+                            <p>This collection is coming soon! 🌸</p>
+                            <p>Be the first to know when it launches by joining our magical circle.</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="closeModal()">Notify Me ✨</button>
+                    `;
+                    break;
+                case 'newsletter':
+                    content = `
+                        <h3>🎉 Welcome to the Magic!</h3>
+                        <p>Your jewelry personality reading is on its way! ✨</p>
+                        <div style="margin: 20px 0;">
+                            <p>Check your email for:</p>
+                            <p>💌 Your personal style guide</p>
+                            <p>✨ 15% off your first order</p>
+                            <p>🌸 Exclusive collection previews</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="closeModal()">Start Shopping ✨</button>
+                    `;
+                    break;
+            }
+            
+            modalBody.innerHTML = content;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function completeQuiz() {
+            const selected = document.querySelector('input[name="vibe"]:checked');
+            if (selected) {
+                const vibes = {
+                    wildflower: "You're a Wildflower Dreamer! 🌸 Free-spirited and naturally beautiful.",
+                    moonlit: "You're a Moonlit Mystic! 🌙 Thoughtful and deeply intuitive.",
+                    golden: "You're a Golden Hour Goddess! ☀️ Warm, radiant, and inspiring."
+                };
+                
+                document.getElementById('modal-body').innerHTML = `
+                    <h3>✨ Your Jewelry Personality</h3>
+                    <p style="font-size: 1.2rem; margin: 20px 0;">${vibes[selected.value]}</p>
+                    <p>Your perfect collection is waiting for you!</p>
+                    <button class="btn btn-primary" onclick="closeModal()">Explore My Collection ✨</button>
+                `;
+            }
+        }
+
+        function handleNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            if (email) {
+                setTimeout(() => {
+                    showModal('newsletter');
+                }, 500);
+            }
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('modal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Add some magic on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const sparkles = ['✨', '🌸', '💜', '🦋'];
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => {
+                        const sparkle = document.createElement('div');
+                        sparkle.innerHTML = sparkles[Math.floor(Math.random() * sparkles.length)];
+                        sparkle.style.position = 'fixed';
+                        sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                        sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                        sparkle.style.fontSize = '2rem';
+                        sparkle.style.pointerEvents = 'none';
+                        sparkle.style.zIndex = '9999';
+                        sparkle.style.animation = 'fadeInUp 2s ease-out forwards';
+                        document.body.appendChild(sparkle);
+                        
+                        setTimeout(() => sparkle.remove(), 2000);
+                    }, i * 200);
+                }
+            }, 1000);
+        });
+
+        const quizQuestions = [
+            {
+                question: "When getting dressed, your first thought is...",
+                options: [
+                    {
+                        text: "Is this outfit telling the right story?",
+                        score: 1,
+                        emoji: "🪽",
+                        archetype: "The Timeless Romantic"
+                    },
+                    {
+                        text: "Does this feel balanced and intentional?",
+                        score: 2,
+                        emoji: "🪞",
+                        archetype: "The Grounded Stylist"
+                    },
+                    {
+                        text: "How does this make my soul feel?",
+                        score: 3,
+                        emoji: "🌿",
+                        archetype: "The Natural Creative"
+                    }
+                    // ... keep existing options, just add archetype property to each
+                ]
+            },
+            {
+                question: "You catch your reflection unexpectedly. What's your first thought?",
+                options: [
+                    { text: "I feel like myself. Comfortable. I'll probably wear the same go-to pieces.", archetype: "The Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Polished enough, but I'll fix that one detail before heading out.", archetype: "The Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Not bad — could use a little color or texture to add personality.", archetype: "The Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Close, but I think I'll swap something to match the vibe I want.", archetype: "The Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Something about today feels meaningful. I might wear something with a story.", archetype: "The Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Let's try something different — why not switch it up?", archetype: "The Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Bold look. Big energy. Let's keep it that way.", archetype: "The Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Okay, she's a little chaotic, but we're rolling with it.", archetype: "The Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Clean. Sharp. One statement piece is all I need.", archetype: "The Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Normal's boring. I'm adding something unexpected today.", archetype: "The Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "How do you usually handle change — in life, style, or plans?",
+                options: [
+                    { text: "I prefer what I know. I take time to adjust, and I usually stick to what works.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "If it makes sense, I adapt. But I like structure and knowing where I'm going.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I flow with it. I might not love it at first, but I always find a new rhythm.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Change is fine — as long as I can plan for it and keep control over the details.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I tend to process change emotionally. I need space to reflect before moving forward.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I don't overthink it. If it feels good, I go with it.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I own it. Change gives me a chance to show up bigger and better.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Change is just part of the day. I don't plan much, so it doesn't rattle me.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I adjust only if it's worth the energy. I don't follow trends or noise.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I usually create the change. I get bored if things stay the same for too long.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's the real reason you wear jewelry — beyond just looking good?",
+                options: [
+                    { text: "It reminds me of people I love or moments I want to keep close.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "It completes a look. I feel more put together when I wear it.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "It's how I bring personality into everyday outfits.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "It's a styling tool — I use it to balance, contrast, or elevate.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "It helps me express how I feel, especially when I don't want to say it out loud.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "It's fun. It changes depending on my mood, like clothing for my emotions.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "It's part of my presence. I like standing out and owning the room.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "It's just whatever speaks to me in the moment. No logic, just energy.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "It adds just enough edge or intrigue. One piece can shift the whole vibe.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "It's an art form. I use jewelry to challenge what people expect.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When you walk into a room and people notice your look, what's your reaction?",
+                options: [
+                    { text: "A quiet compliment is sweet, but I don't dress to stand out.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I appreciate it — it means I got the details right.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "It makes me happy if people notice the little touches.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "It's the goal — I put thought into everything I wear.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I like when someone senses the mood I'm channeling.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "It depends on the day. Some days I want to blend in, other days I don't.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Love it. I dress for the entrance.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Honestly, I never really notice — I'm just doing me.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I want to be noticed without saying a word. Impact over volume.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "If they're surprised or intrigued, I've done my job.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "A bold new jewelry trend is everywhere — how do you react?",
+                options: [
+                    { text: "I'll admire it on others, but it's not really my thing.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "If it fits my style, I might ease it in — carefully.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I'll try a version of it, but I'll make it feel like me.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I'll test it out strategically — if it works with my look, it stays.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Only if it feels emotionally resonant — not because it's trending.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I love trying new stuff! If it's fun, I'm in.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Yes. Immediately. In multiple colors.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I'll probably wear it by accident before realizing it's a trend.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Trends don't matter to me. I stick to my signature pieces.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I was already wearing it — or something weirder.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When it comes to color in your jewelry or style, you tend to…",
+                options: [
+                    { text: "Stick to soft, muted tones that go with everything.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Choose neutrals, golds, or earthy shades — practical but polished.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I like natural, warm, and seasonal colors that feel grounding.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I build a whole look around one or two tones — it's always coordinated.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I pick colors based on my emotions — some days cool, some days warm.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "It changes all the time. I'm not loyal to any one palette.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "The bolder, the better. Give me color that demands attention.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I wear whatever jumps out at me. Chaos is color too.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Mostly black, maybe with a pop of something deep or metallic.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I gravitate toward unexpected pairings — offbeat but intentional.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "You're out, and a piece of your jewelry breaks. What's your first instinct?",
+                options: [
+                    { text: "I'm genuinely sad. That piece meant something.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "That's annoying. I'll get it fixed and move on.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Maybe I can turn it into something new.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "That throws off my whole look. Time to adjust quickly.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "It feels symbolic somehow. I'll probably keep the broken piece.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Eh, I'll just take it off and keep enjoying the day.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "A little drama never hurt. I'll make the rest of the outfit louder.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Happens all the time. I'm surprised anything's still in one piece.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Annoying, but not the end of the world. I've still got the vibe.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "It's giving 'deconstructed realness.' I'll own it.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "You're making a big decision (life, work, style — anything). What's your process like?",
+                options: [
+                    { text: "I trust my gut, but I usually ask someone I love first. I value emotional guidance.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I write things down, look at the pros and cons, and take my time.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I follow the mood and check in with how it feels in my body — not just my brain.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I need to understand all the variables. I'll research, plan, and revisit.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I reflect. I try to understand what the decision says about who I am becoming.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I usually go with what feels exciting. Sometimes I course-correct later.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I move fast. I know what I want. I go for it.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I rarely overthink it. Life works out — and even when it doesn't, it's a story.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I pick the cleanest option with the highest impact. No mess, no fuss.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I make choices that push me forward, even if they don't make sense to others yet.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "How do you tend to show up in social situations?",
+                options: [
+                    { text: "I like smaller, meaningful interactions. I listen more than I speak.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I'm approachable and calm. I keep things light and steady.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I vibe with the room. If it's chill, I'm chill. If it's weird, I lean in.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I'm usually the person who brought the gift, organized the table, and noticed the vibe shift.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I have a few deep conversations and quietly disappear when I'm full.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I float from group to group. I love sampling people's energy.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I take up space — in the best way. I'm probably telling a story and making everyone laugh.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I don't really plan anything. I show up, see what happens, and ride the moment.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I say very little, but people seem to pay attention when I do.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I confuse people at first, then fascinate them. I like being the wildcard.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When life gets overwhelming, how do you cope?",
+                options: [
+                    { text: "I go quiet. I hold onto routine and reach out to people who ground me.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I clean. I organize. I find calm in order.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I retreat into creativity — journaling, playlists, long walks.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I build a plan. Even a small plan makes me feel in control again.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I process through emotions first. I let myself feel everything.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I try to distract myself with something new or fun.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I do something bold — a new look, a big decision. I reframe the moment.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I let the storm pass. I don't resist it, I just ride it out.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I pull back. I get quiet and cut out anything unnecessary.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I create something from it. Chaos usually becomes part of my next reinvention.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When you think about your identity, what matters most to you?",
+                options: [
+                    { text: "That I'm loyal. That I love deeply. That I leave behind warmth.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "That I'm steady. That people can rely on me. That I bring ease.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "That I'm genuine. That I create space for real connection.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "That I'm thoughtful. That everything I do has intention.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "That I'm layered. That my story is soft, complicated, and still unfolding.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "That I'm curious. That I bring joy and try new things.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "That I'm unforgettable. That I always show up fully.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "That I don't force anything. That I live on my terms.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "That I'm composed. That I say more with less.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "That I create things no one else can. That I change how people see the world.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "Someone compliments your jewelry — how do you respond?",
+                options: [
+                    { text: "I smile and tell them why it's special. There's always a story.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I thank them and keep it short. I appreciate it, but I don't make it a thing.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I light up and say, 'Thanks! I wasn't sure it worked but I like how it feels today.'", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I explain why I picked it. It's always part of the bigger look.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I get a little shy. Compliments catch me off guard, but they mean a lot.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I laugh and say, 'Right?! I just threw it on.' Even if I didn't.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I nod like, obviously. I mean — did you expect anything less?", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I say, 'You want it?' I've literally given someone a ring off my hand.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Just a smile and a 'Thanks.' The jewelry speaks for itself.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I usually ask what they see in it. Compliments are a conversation.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "You unexpectedly get the whole day to yourself. What are you doing?",
+                options: [
+                    { text: "Staying home with a warm drink, wearing cozy layers and my favorite necklace.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Catching up on life — errands, a bit of reading, maybe organizing my space.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Wandering a market, touching fabrics, picking up small things that speak to me.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Planning outfits for upcoming events, or curating playlists and Pinterest boards.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Writing, daydreaming, maybe revisiting old photos or memories.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Trying something new — maybe baking something complicated just for fun.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Putting on a full look and taking myself somewhere fabulous.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "No plan. I'll follow the weather, the vibe, or a good impulse.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Solo museum trip, dark outfit, earbuds in, minimal human interaction.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Sketching ideas, writing wild thoughts, or rearranging my room at midnight.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "Someone tells you there's a 'rule' in fashion or life. What's your response?",
+                options: [
+                    { text: "If it makes things easier, I'll probably follow it.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I ask myself if it's useful. If it helps keep things balanced, sure.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I might bend it. I trust my instincts more than a rulebook.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Rules are a framework. I'll follow them — unless I've got a better plan.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I feel the rule first. If it feels limiting, I step back.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I test it. Just to see what happens when I don't follow it.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "If everyone's doing it one way, I do it louder, flashier, and first.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I don't hear rules. Honestly, I usually miss them entirely.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I break rules quietly. I prefer to make my own structure.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I rewrite them. Rules are raw material for reinvention.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When someone misunderstands you — whether in your style, mood, or meaning — how do you usually react?",
+                options: [
+                    { text: "I feel it deeply but don't always say anything. I just try to show who I am over time.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I clarify gently, but I don't push. Not everyone has to get me.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "It stings a little, but I figure they'll understand eventually — or they won't.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I explain where I was coming from, especially if it affects the bigger picture.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I replay it later and wonder what I could've said differently. I want to be seen clearly.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I laugh it off. If someone doesn't get me, that's their plotline.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I clarify once, then move on. I'm not for everyone.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I honestly don't mind. I know who I am — and that's enough.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I let the misunderstanding sit. I'd rather stay quiet than overexplain.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I kind of expect it. I'm used to people catching up later.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "People who know you best would probably say your energy is...",
+                options: [
+                    { text: "Warm, steady, and thoughtful. You always remember the little things.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Reliable, calm, and quietly stylish. You make things look easy.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Softly expressive. You always bring a sense of calm curiosity.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Organized and intentional — you don't show up by accident.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Deep and reflective — your world feels poetic, even in the small stuff.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Fun, flexible, and full of surprises — people never know what to expect, in the best way.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Bold, exciting, and magnetic. When you walk in, people notice.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Laid-back and full of unexpected energy — like a cool breeze that turns into a dance break.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Strong, focused, and minimal with impact — you say a lot without saying much.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Innovative, unpredictable, a little intense — people are drawn to how different you are.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When you think about personal style — what does it actually mean to you?",
+                options: [
+                    { text: "It's about comfort and memory. My style connects me to who I am.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "It's how I stay presentable and polished. It helps me feel ready.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "It's self-expression, but gentle. It shifts with how I feel that day.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "It's visual storytelling. Every piece says something about my mindset.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "It's emotion, memory, and mood all woven together. It's my softness, externalized.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "It's a sandbox. I mix it up, play around, and see what sticks.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "It's power. It's presence. My style is my announcement.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "It's whatever I want that day. Style isn't fixed — it's feeling.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "It's clarity. I don't need to wear much to say exactly who I am.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "It's experimentation. Style is a language I keep inventing.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "How do you feel about being consistent — in style, behavior, or routine?",
+                options: [
+                    { text: "Consistency makes me feel safe and rooted. I thrive in patterns.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I like having a rhythm — but I'll tweak things if it makes sense.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I have patterns, but I don't cling to them. I let them evolve.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I like consistency — but only if it's thoughtful and purposeful.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I flow between phases. Some parts of me stay the same, others change with the season.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I get bored if things are too consistent. I need variety.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Consistent energy? Yes. Consistent look? Never.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I resist routine. If something repeats too much, I'll flip the table.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I like consistency when it's clean and intentional. No clutter, no chaos.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I reinvent too often to stay consistent. Evolution is the consistency.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your relationship with stability — in how you think, feel, or move through the world?",
+                options: [
+                    { text: "I find comfort in stability. I like knowing what to expect, and I tend to hold on.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I value structure — it helps me stay calm and focused, especially when things get noisy.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I move with gentle patterns, but I try not to hold on too tightly. Flexibility matters.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Stability is a tool. I build systems so I can function well — but I leave room for change.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I'm emotionally fluid. I crave consistency but often live in waves.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I don't fear change. Stability is nice, but I don't depend on it.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I create my own stability through momentum. I feel most grounded when I'm in motion.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Stability? It finds me when it needs to. I live moment to moment.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I like stability in my inner world. Outwardly, I keep it minimal so I can stay clear.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I outgrow stability fast. I need motion, friction, and reinvention to feel alive.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "If your inner voice had a personal motto — the one that quietly drives you — what would it be?",
+                options: [
+                    { text: "Stay soft. Stay steady. What matters most will always matter.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Keep it simple, show up well, and trust what you've built.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Feel everything, but don't let it drown you — make something from it.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "If it has purpose, it has power. Design your life on purpose.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Hold the past gently, imagine the future softly, move through now like a poem.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Try it once. Then try it again in a totally different way.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Why dim down when you were clearly built to shine loud?", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Nothing is that serious. Loosen your grip and let it get weird.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Say less. Mean it fully. Let the silence dress you.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Create what doesn't exist yet. And don't apologize when it confuses people.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "Imagine someone describing your energy after you've left the room. What do you hope they say?",
+                options: [
+                    { text: "They made everything feel a little gentler.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "They were calm, composed, and left things better than they found them.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "There was something warm and curious about them — like sunlight through leaves.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "You could tell they thought through everything — even their silence.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "There was depth there — like they carry old stories in their eyes.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Honestly? That person's kind of a fun mystery.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "They owned the space. I'll remember that vibe.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "No idea what just happened, but I loved it.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "They didn't say much, but something about them stuck with me.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "They were ahead of their time — in energy, in style, in everything.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "If your style came with a warning label, what would it say?",
+                options: [
+                    { text: "Handle with care. Prone to nostalgic attachments.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Caution: May cause envy in effortlessly dressed individuals.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Fragile but adaptable. Vibe may vary with season or moon phase.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Calibrated look. Do not disturb unless you've thought it through.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "May cause unexpected daydreaming and emotional resonance.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Contents change daily. Sparkles not included — they're implied.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Loud. Bold. Not here for subtle.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "This outfit made sense to someone, and that's what counts.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Minimalist. High impact. Don't confuse quiet with boring.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Warning: Style may be misinterpreted as performance art.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "No one knows this about you, but deep down, you live by this rule:",
+                options: [
+                    { text: "If it holds meaning, it's worth keeping — in style or in life.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Consistency is powerful. I trust what I return to.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Everything speaks — you just have to pay attention to the details.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "The vibe is never accidental. I don't just show up — I arrive with intention.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Feel everything fully, then turn it into beauty.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Try everything once. The second time's just for fun.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "If it doesn't make you feel something, it's not worth wearing.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Freedom first, aesthetic second — but ideally both.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Let people wonder. Let the outfit do the talking.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Rules are raw material. I'm building something else entirely.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "If you had to put your faith in one thing — above logic, advice, or even past experience — what would it be?",
+                options: [
+                    { text: "The heart. Even when it's wrong, at least it's real.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Patterns. If something keeps happening, it's probably trying to teach me.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "The feeling in my chest when something just clicks — that quiet yes.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Process. If I work through it properly, the answer will show up.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Dreams, signs, symbols — I think everything means something.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "My curiosity. If I'm excited about it, it's worth a shot.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "My instinct. I've survived this far on it.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "The wind. Literally and metaphorically.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Silence. That still moment before I react tells me everything.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Possibility. If no one else sees it yet, I probably should.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When everything feels like it's spinning — what brings you back to yourself?",
+                options: [
+                    { text: "A familiar place or person. Something unchanged.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "A daily ritual — even if it's just making tea or checking the time.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Touching something real — water, leaves, a pet, a notebook.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Writing things out, making a list, sorting the chaos.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Music. Always music. The kind that matches the ache.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Laughing at something silly and remembering none of this is forever.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Action. Loud music, bold moves — anything to reclaim the moment.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Movement. Dancing, walking, disappearing into motion.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Silence. Turning off all the noise and just… being.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Creating. If I can turn it into something new, I'm okay.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "Which of these feels most like freedom to you right now?",
+                options: [
+                    { text: "Being loved exactly as you are.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Having enough — time, money, energy — and not needing more.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Waking up without plans and following whatever pulls you.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Having clarity — a clear plan, a clear path, a clear space.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Writing your own story without needing it to make sense to anyone else.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Getting lost somewhere you've never been — on purpose.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Saying what you mean, wearing what you want, taking up space unapologetically.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "No phone. No schedule. Just sunlight and a yes.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Doing less. Saying no. Owning your stillness.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Inventing something wild — and seeing others inspired by it.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's something you do when no one's around — not because you're hiding, but because it feels most you?",
+                options: [
+                    { text: "Re-read old messages or memories. Relive moments that meant something.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Tidy a space. Make a to-do list. Reset something quietly.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Make up stories, daydream, or talk to your plants or pet.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Rework a plan. Edit something. Perfect the little details.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Play songs that make you cry a little, just for the release.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Dance, change outfits, rearrange your room 3 times in one hour.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Practice a dramatic speech or hair flip in the mirror. For the plot.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Sing loudly, badly, and wonderfully. Or just vanish into a walk.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Sit in the dark with a candle and a thought you don't want to lose.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Scribble ideas that don't make sense yet — but feel electric.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "When life feels random or messy, how do you make sense of it?",
+                options: [
+                    { text: "I look at who was there with me. Connection gives things meaning.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I try to find the lesson. It helps to turn it into something useful.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I narrate it like a story. Everything's part of the plot.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I organize it into a system. I need structure to feel clarity.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I cry a bit. Then I find the poetry in it.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I make a joke, then chase the next weird adventure.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I decide what it meant. Meaning is power — and I like to keep mine.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I stop trying to understand it. Some things aren't meant to be decoded.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I step back. Zoom out. Then I focus on what still feels true.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I turn it into fuel. Even chaos has creative potential.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "There's one thought that keeps echoing in your mind lately — which one feels the closest?",
+                options: [
+                    { text: "Will this still matter 10 years from now… or forever?", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Am I building something I can live with — and in?", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "What if this weird thing I'm drawn to… actually matters?", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "If I take this one small step, what opens up next?", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Is it possible I'm becoming someone softer — or braver?", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Why not try it, just to see what happens?", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "What if I'm already more powerful than I've admitted?", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Do I need to take this seriously… or do I just need air?", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "What can I remove that's making this heavier than it needs to be?", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "What if no one's done it yet — because it's my idea to do?", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your relationship with change?",
+                options: [
+                    { text: "I prefer gentle transitions. Sudden changes feel disruptive.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I accept it when necessary, but I like to plan for it.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I flow with it, like seasons changing. It's natural.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I strategize around it. Change is fine if it serves a purpose.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I feel it deeply, but I try to find beauty in the transition.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I get excited! Change means new possibilities.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I create it. Why wait for change when you can lead it?", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Change is my constant. I get antsy when things stay the same.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I edit constantly. Small changes keep bigger ones manageable.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I chase it. The more radical the change, the more interested I am.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your first instinct when someone questions your choices?",
+                options: [
+                    { text: "I listen, but hold onto what feels true to me.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I consider their perspective, then decide if adjustments make sense.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I explain my creative process, even if they don't get it.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I walk them through my reasoning. My choices are always intentional.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I feel hurt, but try to understand where they're coming from.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I shrug and keep experimenting. Their confusion is part of the fun.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I double down. Criticism just makes me more certain.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I barely notice. I'm already onto the next thing.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I stay quiet. My choices don't need defending.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I get excited. Questions mean I'm pushing boundaries.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your relationship with time?",
+                options: [
+                    { text: "I'm nostalgic. The past feels more real than the future sometimes.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I'm punctual. Time is a resource I try to use wisely.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I flow between past and future, but try to stay present.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I schedule carefully. Every moment should have intention.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I get lost in daydreams. Time feels more poetic than linear.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I play with it! Sometimes an hour feels like a minute.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I make time work for me. I create my own deadlines.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "What time? I'll get there when I get there.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I value it highly. I don't waste time or let it waste me.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I work in my own timezone. The future is more interesting anyway.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your relationship with beauty?",
+                options: [
+                    { text: "It's in the details that last — the patina of time, the story behind things.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "It's in balance and harmony. When everything has its place.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "It's everywhere if you look closely enough. Even in imperfection.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "It's in thoughtful design. When form meets function perfectly.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "It's in feelings and memories. The way light hits water or music feels.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "It's in surprises and accidents. The unexpected combinations.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "It's in confidence. When something owns what it is completely.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "It's in freedom. When something exists without trying to be beautiful.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "It's in reduction. When nothing else can be removed.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "It's in innovation. When something changes how we see beauty.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your biggest strength when it comes to personal style?",
+                options: [
+                    { text: "I know what matters to me. I don't chase trends, I build memories.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I understand balance. I can make anything look put-together.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I feel what works. I trust my intuition about pieces.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I plan ahead. Every piece has a purpose in my wardrobe.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I connect emotionally. My style tells my story.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I experiment freely. I'm not afraid to try new things.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I commit fully. When I wear something, I own it.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I stay authentic. My style changes with my mood.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I edit well. I know exactly what to remove.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I innovate naturally. I see possibilities others miss.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your relationship with jewelry specifically?",
+                options: [
+                    { text: "Each piece tells a story. I wear what means something to me.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "I choose classic pieces that elevate any outfit.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "I layer intuitively. I like when pieces feel found or discovered.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I curate carefully. Each piece serves a specific purpose.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "I collect pieces that feel magical or meaningful.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I mix unexpected things. Traditional rules don't apply.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "I wear statement pieces. My jewelry makes an entrance.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I wear what feels right that day. Sometimes none, sometimes all.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "I prefer significant pieces over many small ones.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "I treat jewelry like sculpture. It's art you can wear.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What draws you to a piece of jewelry first?",
+                options: [
+                    { text: "The story behind it or the memory it might hold.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "How versatile and well-made it is.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "The way it makes me feel when I see it.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "How it fits into my existing collection.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "The emotions or dreams it stirs up.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "How different or interesting it is.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Its impact — how it commands attention.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Pure instinct — if it calls to me, I listen.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Its form — clean lines, perfect proportions.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "How innovative or boundary-pushing it is.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your biggest style challenge?",
+                options: [
+                    { text: "Letting go of pieces that don't serve me anymore.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Taking risks without losing my polished look.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Balancing comfort with expression.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Allowing room for spontaneity in my planned looks.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Not getting too caught up in the emotional value of things.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Maintaining some consistency in my experiments.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Knowing when to tone it down (but do I want to?).", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Keeping track of my favorite pieces as I move through life.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Finding pieces that meet my standards for simplicity.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Having others understand my vision before I execute it.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's the first thing you notice about someone — without trying?",
+                options: [
+                    { text: "The softness in their eyes, the way they look at someone they care about. You read people like poetry.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "How they carry themselves — posture, tone, if their energy matches their outfit. You notice alignment.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Their hands. What they fidget with, how they hold a cup, the tiny human details that feel like story starters.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Their choices. The color pairings, the unexpected logic behind something simple. You appreciate quiet precision.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Their sadness. Not in a heavy way — just the part of them that longs for something they haven't said.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Their shoes. Their laugh. Their chaos. Whatever's most alive. You scan for mischief.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Their sparkle — whether it's literal or metaphorical. You notice the volume in someone's spirit.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "The freedom. The untamed vibe. If they're trying too hard, you feel it. You look for ease.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Their stillness. The absence of noise. The clean lines between them and the world.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "The contrast. The contradiction. The thing that doesn't make sense but makes them unforgettable.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your relationship with beauty — the kind you can't explain?",
+                options: [
+                    { text: "It moves me to silence. Beauty reminds me of things I've loved — and lost.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "It's in balance and intention. Beauty shows up when things are in their right place.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Beauty grows wild. I find it in chipped paint, overgrown gardens, and unfiltered feelings.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "I study it. Beauty is in the structure, the design, the thought behind the thing.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Beauty is ache. It stirs nostalgia, longing — I never look at it casually.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "I chase it. Beauty makes me want to remix the world until it sparkles.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Beauty is power. It's drama, color, energy. If I can wear it, I will.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "I don't define it. Beauty is a moment, a giggle, a breeze. It's never fixed.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "It's in what's left unsaid. Space, stillness, the outline of what could be.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "It's an evolution. Beauty is future-tension — something just beyond the present.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What kind of decision-maker are you, deep down?",
+                options: [
+                    { text: "Heart first. I follow what feels timeless, even if it makes no sense.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Practical, but thoughtful. I consider the ripple effect — not just the moment.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Intuitive. My gut speaks in metaphors, but it's usually right.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Methodical. I analyze, map, and refine. Precision brings peace.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Emotional. I overfeel, then overthink, then eventually know.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Impulsive. I'll change my mind tomorrow, but I trust the spark today.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Instinctual. I don't hesitate. I move like I already won.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Go with the wind. If it feels light, it's right. If not, I bail.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Slow. Silent. Final. I don't decide fast, but when I do, it's unshakable.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Abstract. I see the pattern, the potential, the end before the start.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What do you protect most about yourself?",
+                options: [
+                    { text: "My tenderness. The softest parts. I don't show them easily.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "My peace. I've worked hard for it, and not everything deserves access.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "My weird. I share it slowly, like a secret garden.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "My time. My structure. My energy is not free to all.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "My hope. I give so much, but I guard that tiny glowing part.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "My joy. People think it's light, but it comes from depth.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "My softness. I show sparkle, but I don't always show why.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "My freedom. The moment I feel boxed in, I vanish.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "My silence. The power I hold in what I don't say.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "My vision. It's too strange to explain until it's ready to be seen.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "You open the fridge. There's only one thing left. What is it — and what does it say about you?",
+                options: [
+                    { text: "A forgotten bottle of rosé — soft, sentimental, still hopeful", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Chilled sparkling water in a glass bottle — refined and balanced", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "A jar of homemade herbal syrup — you forgot what's in it but it smells like a forest", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "An almond milk latte, perfectly labeled and decanted into a glass bottle. Obviously.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Leftover cake from someone else's birthday — you didn't eat it then, but you're ready now", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "A half-squeezed lemon and rainbow sprinkles. You're not sure how. You're thrilled.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Champagne. Opened. Still fizzy. And you're drinking it from a teacup, aren't you?", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Mango slices and coconut water. You forgot you bought them but now you're vibing.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Cold brew in a black bottle with no label. Iconic. Mysterious. Chic.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Something that hasn't been invented yet. It glows. You sip it anyway.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's in your dream 'emotional survival kit'?",
+                options: [
+                    { text: "Old love notes, fresh peonies, handwritten playlists", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "A planner, herbal tea, your favorite earrings (they bring clarity)", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Sketchpad, lavender oil, 3 poems you wrote but never shared", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Sticky notes, highlighters, backup outfit choices for existential dread", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Tissues, fairy lights, moon water, Spotify Premium", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Glitter glue, sunglasses, 1 rogue temporary tattoo", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Red lipstick, a crown (figurative or literal), and a playlist called 'WATCH ME'", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "A passport, zero plans, and a map you won't use", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Noise-canceling headphones, soft cashmere, a single perfect quote", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "A journal full of metaphors, sunglasses at night, ideas scrawled on your hand", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "If time stopped for 24 hours and you were the only one awake, what would you do?",
+                options: [
+                    { text: "Revisit all the places that made you feel. Write love letters you'll never send.", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "Organize your home like a calm museum. Brew tea. Bask in the silence.", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "Paint on your walls. Sing to plants. Finally finish that weird poem.", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "Rearrange your life vision board. Streamline your closet by emotion.", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "Lie on the floor listening to music. Cry. Heal. Float between thoughts.", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "Try on every outfit you own. Put on a one-person fashion show with snacks.", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "Throw yourself a solo awards ceremony. Make five acceptance speeches.", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "Run through the streets barefoot. Dance on rooftops. Hug a tree.", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "Sit in the quiet. Watch the sky shift. Say nothing. Feel everything.", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "Write a letter to the version of you 10 years from now — then dress like them.", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's your biggest red flag — that you're secretly proud of?",
+                options: [
+                    { text: "'I'll fall in love with you just because of how you said hello.'", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "'I will silently judge you if you mix warm and cool tones poorly.'", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "'I emotionally imprint on inanimate objects.'", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "'I calendar my emotional breakdowns.'", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "'I get nostalgic about things that haven't even ended yet.'", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "'I treat every errand like it's Coachella.'", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "'I interrupt myself. Loudly. For drama.'", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "'I ghost my houseplants and my feelings.'", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "'I disappear when group chats get too sparkly.'", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "'I reinvent myself monthly and expect everyone to keep up.'", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            },
+            {
+                question: "What's something totally irrational you absolutely believe in?",
+                options: [
+                    { text: "That the universe sends signs — like hearing a song at the right time", archetype: "Timeless Romantic", score: 1, emoji: "🪽" },
+                    { text: "That your vibe can shift a whole room's energy without a word", archetype: "Grounded Stylist", score: 2, emoji: "🪞" },
+                    { text: "That your jewelry absorbs emotion and holds memory", archetype: "Natural Creative", score: 3, emoji: "🌿" },
+                    { text: "That color palettes determine fate", archetype: "Intentional Dresser", score: 4, emoji: "📐" },
+                    { text: "That dreams are messages you haven't translated yet", archetype: "Sentimental Dreamer", score: 5, emoji: "🌙" },
+                    { text: "That glitter is a mood stabilizer", archetype: "Playful Explorer", score: 6, emoji: "🎨" },
+                    { text: "That sunglasses improve performance and confidence by 200%", archetype: "Confident Maximalist", score: 7, emoji: "💋" },
+                    { text: "That the wind is talking to you (and you're listening)", archetype: "Free Spirit", score: 8, emoji: "🔥" },
+                    { text: "That silence can reveal secrets if you're patient enough", archetype: "Magnetic Minimalist", score: 9, emoji: "🖤" },
+                    { text: "That the future you dress for is the future you get", archetype: "Visionary Dresser", score: 10, emoji: "🧬" }
+                ]
+            }
+        ];
+
+        function getArchetype(score) {
+            const archetypes = {
+                1: {
+                    name: "The Timeless Romantic",
+                    emoji: "🪽"
+                },
+                2: {
+                    name: "The Grounded Stylist",
+                    emoji: "🪞"
+                },
+                3: {
+                    name: "The Natural Creative",
+                    emoji: "🌿"
+                },
+                4: {
+                    name: "The Intentional Dresser",
+                    emoji: "📐"
+                },
+                5: {
+                    name: "The Sentimental Dreamer",
+                    emoji: "🌙"
+                },
+                6: {
+                    name: "The Playful Explorer",
+                    emoji: "🎨"
+                },
+                7: {
+                    name: "The Confident Maximalist",
+                    emoji: "💋"
+                },
+                8: {
+                    name: "The Free Spirit",
+                    emoji: "🔥"
+                },
+                9: {
+                    name: "The Magnetic Minimalist",
+                    emoji: "🖤"
+                },
+                10: {
+                    name: "The Visionary Dresser",
+                    emoji: "🧬"
+                }
+            };
+
+            return archetypes[score] || archetypes[1]; // Default to Timeless Romantic if score is invalid
+        }
+
+        function shuffleArray(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        let currentQuiz = {
+            questions: [],
+            currentQuestion: 0,
+            answers: [],
+            totalScore: 0
+        };
+
+        function startQuiz(questionCount) {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'block'; // Add this line
+            
+            currentQuiz.questions = shuffleArray([...quizQuestions]).slice(0, questionCount);
+            currentQuiz.currentQuestion = 0;
+            currentQuiz.answers = [];
+            currentQuiz.totalScore = 0;
+            currentQuiz.questionCount = questionCount;
+            
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            const question = currentQuiz.questions[currentQuiz.currentQuestion];
+            const progress = ((currentQuiz.currentQuestion + 1) / currentQuiz.questionCount) * 100;
+            
+            let content = `
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        Question ${currentQuiz.currentQuestion + 1} of ${currentQuiz.questionCount}
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%"></div>
+                        </div>
+                    </div>
+                    <p class="question-text">${question.question}</p>
+                    <div class="options-container">
+                        ${question.options.map((option, index) => `
+                            <button class="quiz-option" 
+                                    onclick="selectAnswer(${index})" 
+                                    data-archetype="${option.archetype}"
+                                    type="button">
+                                <span class="option-emoji">${option.emoji}</span>
+                                <div>
+                                    <p>${option.text}</p>
+                                    <small>${option.archetype}</small>
+                                </div>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            modalBody.innerHTML = content;
+            modal.style.display = 'block'; // Add this line back
+        }
+
+        function selectAnswer(index) {
+            // Remove selected class from all options
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            const selectedOption = document.querySelectorAll('.quiz-option')[index];
+            selectedOption.classList.add('selected');
+            
+            const currentQuestion = currentQuiz.questions[currentQuiz.currentQuestion];
+            const selectedAnswer = currentQuestion.options[index];
+            
+            // Ensure archetype name includes "The"
+            const archetype = selectedAnswer.archetype.startsWith('The ') ? 
+                selectedAnswer.archetype : 
+                `The ${selectedAnswer.archetype}`;
+            
+            // Store the archetype name with "The"
+            currentQuiz.answers.push(archetype);
+            
+            // Add debugging
+            console.log('Selected answer:', archetype);
+            console.log('Current answers:', currentQuiz.answers);
+            
+            setTimeout(() => {
+                currentQuiz.currentQuestion++;
+                if (currentQuiz.currentQuestion < currentQuiz.questionCount) {
+                    showQuestion();
+                } else {
+                    // Add debugging
+                    console.log('Quiz finished, calculating results...');
+                    calculateResults();
+                }
+            }, 300);
+        }
+
+        function calculateResults() {
+            // Add debugging
+            console.log('Calculating results from answers:', currentQuiz.answers);
+            
+            // Count frequency of each archetype
+            const archetypeCounts = {};
+            currentQuiz.answers.forEach(archetype => {
+                archetypeCounts[archetype] = (archetypeCounts[archetype] || 0) + 1;
+            });
+            
+            // Add debugging
+            console.log('Archetype counts:', archetypeCounts);
+            
+            // Calculate percentages and sort by frequency
+            const totalAnswers = currentQuiz.answers.length;
+            const archetypeResults = Object.entries(archetypeCounts)
+                .map(([archetype, count]) => ({
+                    archetype,
+                    count,
+                    percentage: Math.round((count / totalAnswers) * 100)
+                }))
+                .sort((a, b) => b.count - a.count);
+            
+            // Add debugging
+            console.log('Sorted results:', archetypeResults);
+            
+            // Store results
+            currentQuiz.primaryMatch = archetypeResults[0].archetype;
+            currentQuiz.allMatches = archetypeResults;
+            
+            // Add debugging
+            console.log('Primary match:', currentQuiz.primaryMatch);
+            
+            showResult();
+        }
+
+        function showResult() {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Add debugging
+            console.log('Showing result for:', currentQuiz.primaryMatch);
+            
+            const archetypeDetails = getArchetypeDetails(currentQuiz.primaryMatch);
+            
+            // Add debugging
+            console.log('Got archetype details:', archetypeDetails);
+            
+            if (!archetypeDetails) {
+                console.error('No details found for archetype:', currentQuiz.primaryMatch);
+                return;
+            }
+            
+            let content = `
+                <div class="quiz-container result-container" data-archetype="${currentQuiz.primaryMatch}">
+                    <h3>🌸 Your Primary Jewelry Personality 🌸</h3>
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span class="result-emoji">${archetypeDetails.riskType.split(' ')[0]}</span>
+                            <h4 class="result-title">${currentQuiz.primaryMatch}</h4>
+                            <p class="risk-type">${archetypeDetails.riskType}</p>
+                        </div>
+                        
+                        <div class="result-tabs">
+                            <button class="tab-btn active" onclick="switchTab('essence')">Essence</button>
+                            <button class="tab-btn" onclick="switchTab('style')">Style DNA</button>
+                            <button class="tab-btn" onclick="switchTab('vibe')">Vibe Check</button>
+                            <button class="tab-btn" onclick="switchTab('wild')">In The Wild</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="essence">
+                            <div class="essence-card">
+                                <p class="tagline">${archetypeDetails.tagline}</p>
+                                <p>In a word: ${archetypeDetails.inAWord}</p>
+                                <p>In an outfit: ${archetypeDetails.inAnOutfit}</p>
+                                <p>Color mood: ${archetypeDetails.colorMood}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="style">
+                            <div class="born-with">
+                                <h5>Born With:</h5>
+                                <ul>
+                                    ${archetypeDetails.bornWith.map(trait => `<li>${trait}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="vibe">
+                            <div class="mood-card">
+                                <p>${archetypeDetails.signatureMood}</p>
+                                <p class="vibe-tag">${archetypeDetails.vibe}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="wild">
+                            <div class="wild-card">
+                                <p>${archetypeDetails.inTheWild}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn btn-primary" onclick="showAllMatches()">See All My Matches ✨</button>
+                        <button class="btn btn-primary" onclick="downloadCertificate()">Download Certificate 🌸</button>
+                        <button class="btn btn-secondary" onclick="exploreCollection()">Explore My Collection 🌸</button>
+                    </div>
+                </div>
+            `;
+            
+            modalBody.innerHTML = content;
+            modal.style.display = 'block';
+        }
+
+        function downloadCertificate() {
+            const name = prompt("Enter your name for the certificate:", "");
+            if (!name) return;
+
+            // Get the sign-off message based on archetype
+            let signOffMessage = '';
+            switch (currentQuiz.primaryMatch) {
+                case 'The Timeless Romantic':
+                    signOffMessage = '💌 "You\'ve been officially licensed to fall in love with strangers, sunsets, and your own reflection."';
+                    break;
+                case 'The Grounded Stylist':
+                    signOffMessage = '🪞 "Certified calm, collected, and better dressed than everyone in the group chat."';
+                    break;
+                case 'The Natural Creative':
+                    signOffMessage = '🌿 "You are now legally allowed to call your mess \'an aesthetic.\'"';
+                    break;
+                case 'The Intentional Dresser':
+                    signOffMessage = '📐 "Approved for silent power moves and outfits that could run a boardroom or ruin an ex."';
+                    break;
+                case 'The Sentimental Dreamer':
+                    signOffMessage = '🌙 "Officially qualified to cry over earrings and look stunning doing it."';
+                    break;
+                case 'The Playful Explorer':
+                    signOffMessage = '🎨 "Granted full permission to start trends, ignore rules, and wear glitter like sunscreen."';
+                    break;
+                case 'The Confident Maximalist':
+                    signOffMessage = '💋 "Certified to enter every room like it\'s a runway and an apology is never required."';
+                    break;
+                case 'The Free Spirit':
+                    signOffMessage = '🔥 "Unbothered. Unplanned. Unstoppable. This certificate cannot be revoked."';
+                    break;
+                case 'The Magnetic Minimalist':
+                    signOffMessage = '🖤 "Dangerously understated. This confirms you slay without even trying."';
+                    break;
+                case 'The Visionary Dresser':
+                    signOffMessage = '🧬 "Trend forecaster. Reality bender. Style prophet. Your certificate just caught up to you."';
+                    break;
+            }
+
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 1600;
+            const ctx = canvas.getContext('2d');
+
+            // Get archetype details
+            const archetypeDetails = getArchetypeDetails(currentQuiz.primaryMatch);
+
+            // Create a softer pastel gradient background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#FFE6F0');    // Baby pink
+            gradient.addColorStop(0.2, '#F0E6FF');  // Soft lavender
+            gradient.addColorStop(0.4, '#E6F5FF');  // Sky blue
+            gradient.addColorStop(0.6, '#E6FFFA');  // Mint blue
+            gradient.addColorStop(0.8, '#FFE6FF');  // Light rose
+            gradient.addColorStop(1, '#FFF0F5');    // Soft rose
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // "FLEURENE" with elegant styling
+            ctx.textAlign = 'center';
+            ctx.shadowColor = 'rgba(177, 156, 217, 0.4)';
+            ctx.shadowBlur = 20;
+            ctx.font = 'italic bold 95px "Playfair Display"';
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.85)';
+            ctx.fillText('FLEURENE', canvas.width/2, 180);
+            
+            // "JEWELRY" with refined styling
+            ctx.font = 'normal 65px "Playfair Display"';
+            ctx.fillStyle = 'rgba(200, 162, 200, 0.8)';
+            ctx.fillText('JEWELRY', canvas.width/2, 260);
+            
+            // "AESTHETIC RISK" with gradient styling
+            const riskGradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+            riskGradient.addColorStop(0, 'rgba(212, 165, 165, 1)');  // Solid rose
+            riskGradient.addColorStop(0.5, 'rgba(200, 162, 200, 1)'); // Solid mauve
+            riskGradient.addColorStop(1, 'rgba(212, 165, 165, 1)');
+            ctx.fillStyle = riskGradient;
+            ctx.font = 'bold 75px "Playfair Display"';
+            ctx.fillText('AESTHETIC RISK', canvas.width/2, 350);
+            
+            // "CERTIFICATE" with ethereal styling
+            ctx.font = 'italic bold 85px "Playfair Display"';
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.85)';
+            ctx.fillText('CERTIFICATE', canvas.width/2, 440);
+
+            // Add subtitle with more space
+            ctx.shadowBlur = 0;
+            ctx.font = '40px "Playfair Display"';
+            ctx.fillStyle = 'rgba(74, 74, 74, 0.7)';
+            ctx.fillText('OFFICIAL AESTHETIC RISK IDENTITY', canvas.width/2, 580);
+
+            // Add "Awarded to" with soft styling
+            ctx.font = 'italic 55px "Playfair Display"';
+            ctx.fillStyle = 'rgba(200, 162, 200, 0.8)';
+            ctx.fillText('Awarded to:', canvas.width/2, 680);
+
+            // Create gradient for the name
+            const nameGradient = ctx.createLinearGradient(canvas.width/2 - 200, 780, canvas.width/2 + 200, 780);
+            nameGradient.addColorStop(0, 'rgba(212, 165, 165, 0.9)');  // Soft rose
+            nameGradient.addColorStop(0.3, 'rgba(200, 162, 200, 0.9)'); // Lavender
+            nameGradient.addColorStop(0.6, 'rgba(177, 156, 217, 0.9)'); // Lilac
+            nameGradient.addColorStop(1, 'rgba(212, 165, 165, 0.9)');  // Back to rose
+
+            // Add name with gradient styling
+            ctx.font = 'bold 110px "Playfair Display"';
+            ctx.fillStyle = nameGradient;
+            ctx.fillText(name, canvas.width/2, 780); // Keep original y-position
+
+            // Add archetype with dreamy styling
+            ctx.font = 'bold 75px "Playfair Display"';
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.8)';
+            ctx.fillText(currentQuiz.primaryMatch, canvas.width/2, 920);
+
+            // Add risk level and description
+            ctx.font = 'bold 50px "Playfair Display"';
+            ctx.fillStyle = 'rgba(74, 74, 74, 0.8)';
+            const riskLevel = archetypeDetails.riskType.split('–')[0].trim();
+            ctx.fillText(riskLevel, canvas.width/2, 1020);
+
+            // Add the actual risk description
+            ctx.font = 'italic 35px "Playfair Display"';
+            ctx.fillStyle = 'rgba(200, 162, 200, 0.9)';
+            const riskDescription = archetypeDetails.riskType.split('–')[1].trim();
+            ctx.fillText(riskDescription, canvas.width/2, 1090); // Moved down from 1070
+
+            // Add "In One Word:" with formatting
+            ctx.font = 'italic 40px "Playfair Display"';
+            ctx.fillStyle = 'rgba(74, 74, 74, 0.7)';
+            ctx.fillText('In One Word:', canvas.width/2, 1170);
+            ctx.font = 'bold 40px "Playfair Display"';
+            ctx.fillText(archetypeDetails.inAWord, canvas.width/2, 1220);
+
+            // Add decorative elements before sign-off
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.4)';
+            ctx.font = '30px "Playfair Display"';
+            ctx.fillText('✧ ⋆ ❅ ⋆ ✧', canvas.width/2, 1300);
+
+            // Add sign-off message with darker lavender color
+            ctx.font = 'italic 32px "Playfair Display"';
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.95)'; // Darker lavender
+            ctx.textAlign = 'center';
+
+            // Add decorative elements
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.7)';
+            ctx.font = '30px "Playfair Display"';
+            ctx.fillText('✧ ⋆ ❅ ⋆ ✧', canvas.width/2, 1300);
+
+            // Add sign-off message with text wrapping
+            ctx.font = 'italic 32px "Playfair Display"';
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.95)'; // Darker lavender
+            const messageHeight = wrapText(ctx, signOffMessage, canvas.width/2, 1350, canvas.width - 200, 40);
+
+            // Add decorative elements after
+            ctx.fillStyle = 'rgba(177, 156, 217, 0.7)';
+            ctx.fillText('✧ ⋆ ❅ ⋆ ✧', canvas.width/2, 1350 + messageHeight + 30);
+
+            // Add date with elegant styling
+            ctx.font = '35px "Playfair Display"';
+            ctx.fillStyle = 'rgba(74, 74, 74, 0.7)';
+            const date = new Date().toLocaleDateString('en-US', { 
+                month: 'long', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+            ctx.fillText(date, canvas.width/2, 1350 + messageHeight + 80);
+
+            // Add certified text with romantic flourish
+            ctx.font = 'bold 50px "Playfair Display"';
+            ctx.fillStyle = 'rgba(200, 162, 200, 0.9)'; // Soft mauve
+            ctx.fillText('✧ FLEURENE CERTIFIED ✧', canvas.width/2, 1570);
+
+            // Add delicate star border
+            for (let i = 0; i < 30; i++) {
+                const x = 80 + i * (canvas.width - 160)/29;
+                ['✧', '·'].forEach((star, j) => {
+                    ctx.font = j === 0 ? '18px "Playfair Display"' : '12px "Playfair Display"';
+                    ctx.fillStyle = j === 0 ? 'rgba(177, 156, 217, 0.5)' : 'rgba(200, 162, 200, 0.5)';
+                    ctx.fillText(star, x, 70);
+                    ctx.fillText(star, x, canvas.height - 70);
+                });
+            }
+
+            // Create download link
+            const link = document.createElement('a');
+            link.download = `Fleurene-Certificate-${name.replace(/\s+/g, '-')}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function showAllMatches() {
+            const modalBody = document.getElementById('modal-body');
+            
+            let content = `
+                <div class="quiz-container matches-container">
+                    <h3>🌸 Your Style Compatibility 🌸</h3>
+                    ${currentQuiz.allMatches.map(match => `
+                        <div class="match-card" data-archetype="${match.archetype}">
+                            <h4>${match.archetype}</h4>
+                            <div class="percentage-bar">
+                                <div class="percentage-fill" style="width: ${match.percentage}%"></div>
+                                <span>${match.percentage}%</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                    <button class="btn btn-secondary" onclick="showResult()">Back to Primary Match 🌸</button>
+                </div>
+            `;
+            
+            modalBody.innerHTML = content;
+        }
+
+        function switchTab(tabName) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        function shareResult() {
+            // Implement sharing functionality
+            // Could open a modal with social share buttons or copy link
+        }
+
+        function exploreCollection() {
+            // Implement collection exploration
+            // Could redirect to shop or show recommended pieces
+        }
+
+        function scrollToQuiz(event) {
+            event.preventDefault();
+            const quizSection = document.getElementById('quiz-section');
+            quizSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function getArchetypeDetails(archetypeName) {
+            const details = {
+                "The Timeless Romantic": {
+                    inAWord: "Devoted",
+                    inAnOutfit: "A satin dress, a locket, and eyes full of memory",
+                    colorMood: "Dusty blush, antique gold, faded lilac, moonlight",
+                    tagline: "Forever isn't long enough",
+                    riskType: "🕊 Ultra Low Risk – Cries to vintage love songs. Owns multiple lace items.",
+                    bornWith: [
+                        "The entire plot of a 2003 love movie inside your soul",
+                        "A vintage soul and 10 saved love poems",
+                        "The uncanny ability to remember every anniversary"
+                    ],
+                    signatureMood: "You hold onto movie stubs. You rewatch Pride & Prejudice like it's church. You whisper to jewelry before you wear it. Your heart is a Pinterest board full of handwritten vows and soft candlelight.",
+                    inTheWild: "You've gotten lost in old photo albums. You name your plants after literary characters. Your friends describe you as 'romantically time-traveling'.",
+                    vibe: "Victorian ghost with a Spotify Premium account"
+                },
+
+                "The Grounded Stylist": {
+                    inAWord: "Balanced",
+                    inAnOutfit: "Soft trousers, intentional earrings, tote bag with a book inside",
+                    colorMood: "Oat milk, stone, sage green, café beige",
+                    tagline: "Tasteful chaos is still chaos",
+                    riskType: "🌿 Low Risk – Always calm, never boring. Organizes joy in color order.",
+                    bornWith: [
+                        "The gift of dressing well without trying",
+                        "The calm energy of a neutral-toned yoga mat",
+                        "More aesthetically pleasing notebooks than anyone needs"
+                    ],
+                    signatureMood: "You love routine, cozy silence, and well-designed mugs. You accessorize like it's a mindfulness exercise. You don't follow trends — you follow balance, and everyone else follows you.",
+                    inTheWild: "You've been mistaken for a gallery curator. Your coffee order is both simple and specific. Your friends ask you to organize their closets.",
+                    vibe: "Your favorite podcast got turned into a person"
+                },
+
+                "The Natural Creative": {
+                    inAWord: "Soulful",
+                    inAnOutfit: "A flowy cardigan with ink stains and 3 mysterious rings",
+                    colorMood: "Terracotta, wildflower yellow, fern, bark brown",
+                    tagline: "Vulnerability is my aesthetic",
+                    riskType: "🌱 Low-Moderate Risk – 'Accidentally started a side business making ceramic mugs.'",
+                    bornWith: [
+                        "Paint-stained hands and moss under your nails",
+                        "Emotional support plants",
+                        "A playlist called 'gentle chaos'"
+                    ],
+                    signatureMood: "You are the human version of golden hour. You romanticize walking barefoot. You dress in layers of emotion and linen. Every item you own has a story. Probably involving a forest.",
+                    inTheWild: "You collect leaves that 'look like feelings.' Your art supplies have overtaken your dining table. Your friends call you for color therapy.",
+                    vibe: "Cottagecore x Studio Ghibli x your therapist's favorite scarf"
+                },
+
+                "The Intentional Dresser": {
+                    inAWord: "Curated",
+                    inAnOutfit: "Architecturally draped shirt, monochrome trousers, clean lines",
+                    colorMood: "Slate, camel, ivory, espresso",
+                    tagline: "Intentional isn't boring. It's brutal",
+                    riskType: "🪙 Moderate Risk – 'Has a spreadsheet for earrings. And feelings.'",
+                    bornWith: [
+                        "A minimal wardrobe and maximal standards",
+                        "'It girl' intuition in a Google Doc",
+                        "Jewelry that could double as sculpture"
+                    ],
+                    signatureMood: "Your vibe is calm power. You do 'quiet luxury' but with actual personality. You know exactly which necklace balances that neckline — and which opinion to keep to yourself… until it matters.",
+                    inTheWild: "You've turned down compliments that weren't specific enough. Your closet is color-coded. Your friends think you're mysterious but you're just organized.",
+                    vibe: "Clean girl meets brutalist museum curator"
+                },
+
+                "The Sentimental Dreamer": {
+                    inAWord: "Melancholic (in a poetic way)",
+                    inAnOutfit: "A velvet slip, layered necklaces, and eyes that say 'I've felt things'",
+                    colorMood: "Midnight blue, violet haze, candle gold, faded mauve",
+                    tagline: "Reality was never enough for me",
+                    riskType: "🌀 Moderate Risk – 'Probably crying over a moth and looks incredible doing it.'",
+                    bornWith: [
+                        "Moonlight in your bloodstream",
+                        "A playlist for every heartbreak (including ones that haven't happened)",
+                        "Rings you twirl while staring out the window"
+                    ],
+                    signatureMood: "You dream in soft-focus. You feel with your whole soul. You once bought a ring just because it 'felt like a memory.' Your phone background is probably a galaxy or a blurry flower.",
+                    inTheWild: "You've written poetry about your jewelry. Your camera roll is full of blurry lights. Your friends worry about you but in a romantic way.",
+                    vibe: "Lana Del Rey lyrics dressed in celestial dust"
+                },
+
+                "The Playful Explorer": {
+                    inAWord: "Kaleidoscopic",
+                    inAnOutfit: "Mixed prints, oversized earrings, shoes that make you grin",
+                    colorMood: "Watermelon pink, seafoam green, highlighter yellow, tangerine",
+                    tagline: "Chaos, but curated",
+                    riskType: "✨ Moderate-High Risk – 'May cause spontaneous trends, accidental glitter storms, and unexplained joy.'",
+                    bornWith: [
+                        "Rainbow DNA",
+                        "A passport full of stickers and good decisions",
+                        "Three unfinished hobbies and five signature catchphrases"
+                    ],
+                    signatureMood: "Your brain moves faster than your outfit changes — and that's saying something. You layer necklaces like a dragon hoarding fun. You own sunglasses for moods, not sun. You say 'YOLO' unironically and with purpose.",
+                    coreBeliefs: [
+                        "Rules? Cute. But let's improvise.",
+                        "Joy is an aesthetic and a strategy.",
+                        "If your outfit doesn't make you smile, why are you even dressed?"
+                    ],
+                    inTheWild: "You've started a trend by accident. Your workspace looks like a mood board exploded. Your friends never know what version of you they're getting.",
+                    vibe: "Pinterest board meets glitter explosion meets emotional support confetti"
+                },
+
+                "The Confident Maximalist": {
+                    inAWord: "Dazzling",
+                    inAnOutfit: "The loudest gold chain + that lipstick shade that starts revolutions",
+                    colorMood: "Fuchsia flame, molten gold, black lacquer, disco silver",
+                    tagline: "I'm not being extra. I'm being accurate",
+                    riskType: "💎 High Risk – 'Glitter is your coping mechanism. And your strategy.'",
+                    bornWith: [
+                        "Main character syndrome (diagnosed with pride)",
+                        "A magnet for the spotlight",
+                        "Enough jewelry to blind a humble minimalist"
+                    ],
+                    signatureMood: "You open your closet and it says 'Let's give them a show.' You walk into a room and the air gets thick with admiration, envy, or curiosity — sometimes all three. You believe in overdressing for errands and emotionally bonding with your mirror. Your rings have names. Your perfume has a backstory.",
+                    coreBeliefs: [
+                        "If you're not making an entrance, why are you entering?",
+                        "Every outfit is a conversation, and you talk loud.",
+                        "Risk is just confidence in heels."
+                    ],
+                    inTheWild: "You've been asked to tone it down (you declined). Your jewelry box needs its own room. Your friends use you as their personal north star.",
+                    vibe: "Beyoncé's stylist + Rihanna's boldness + a magpie's treasure trove"
+                },
+
+                "The Free Spirit": {
+                    inAWord: "Uncontainable",
+                    inAnOutfit: "Flowing maxi, barefoot, layered beads from five countries",
+                    colorMood: "Sunset orange, desert rose, seafoam, burnt amber",
+                    tagline: "If I can't dance in it, I don't want it",
+                    riskType: "🔥 High Risk – 'Lost in the wild. Found in five different people's camera rolls.'",
+                    bornWith: [
+                        "Wind in your lungs",
+                        "A heart that beats in wanderlust",
+                        "37 notebooks, 6 journals, and no return ticket"
+                    ],
+                    signatureMood: "Your soul is part sunbeam, part chaos. You treat routine like a polite suggestion. You once bought a necklace from a stranger on a beach and now it's your favorite. You believe the best kind of sparkle is the kind you find by accident.",
+                    coreBeliefs: [
+                        "Spontaneity is a love language.",
+                        "Freedom is worth accessorizing.",
+                        "Stories are souvenirs."
+                    ],
+                    inTheWild: "You've gotten lost (on purpose) in a foreign city. You wear mismatched earrings and call it artistic tension. Your friends describe you as 'untameable... in a good way.'",
+                    vibe: "Wanderlust meets wearable soul — barefoot but fabulous"
+                },
+
+                "The Magnetic Minimalist": {
+                    inAWord: "Precision",
+                    inAnOutfit: "Tailored black coat, slicked bun, one ring that says everything",
+                    colorMood: "Matte black, ash grey, chrome, bone white",
+                    tagline: "I don't dress to impress. I dress to dominate — softly",
+                    riskType: "🧊 Ultra High Risk – 'Says one thing. Changes the room.'",
+                    bornWith: [
+                        "A steely stare and even steelier standards",
+                        "A wardrobe that only whispers but somehow screams",
+                        "Enough black clothing to host your own avant-garde cult"
+                    ],
+                    signatureMood: "You're the human equivalent of a perfectly structured sentence. People call you intimidating, but you're just focused. You edit. You curate. You wear simplicity like armor — and everyone notices.",
+                    coreBeliefs: [
+                        "Mystery is magnetism.",
+                        "Clean lines are sexy.",
+                        "Power doesn't have to yell."
+                    ],
+                    inTheWild: "You've said 'I'm not really into jewelry' — while wearing the most expensive-looking chain in the room. You wear silence like a crown. You were once mistaken for a designer in a café. You didn't correct them.",
+                    vibe: "Scandinavian assassin in a Céline campaign"
+                },
+
+                "The Visionary Dresser": {
+                    inAWord: "Transcendent",
+                    inAnOutfit: "A sculptural cape over a mesh turtleneck with LED cuffs",
+                    colorMood: "Holographic lilac, cyber lime, chrome melt, deep ink",
+                    tagline: "I don't fit the mold. I melt it",
+                    riskType: "🚀 Ultra High Risk – 'Not for mass consumption. Or mortal timelines.'",
+                    bornWith: [
+                        "Alien DNA",
+                        "A sixth sense for aesthetic revolutions",
+                        "An inner moodboard downloaded from the cosmos"
+                    ],
+                    signatureMood: "Your closet looks like a concept art folder. You don't just wear fashion — you perform it. You once described your earrings as 'post-modernism's rebuttal to tradition.' Your friends never ask, 'Why that outfit?' — they ask, 'What era are we in today?'",
+                    coreBeliefs: [
+                        "Trends are lowercase. You're ALL CAPS.",
+                        "Clothes should be expressive, emotional, and maybe a little unhinged.",
+                        "Reality is optional if the lighting is right."
+                    ],
+                    inTheWild: "You've been photographed by street style blogs who couldn't categorize you. Your outfits have their own Instagram archive. Your friends have stopped asking where you got things because they know it's either from the future or your dreams.",
+                    vibe: "A time-traveling fashion oracle with feelings"
+                }
+            };
+
+            return details[archetypeName] || null;
+        }
+
+        // Add the wrapText function before it's used
+        const wrapText = (ctx, text, x, y, maxWidth, lineHeight) => {
+            const words = text.split(' ');
+            let line = '';
+            let lines = [];
+
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                const metrics = ctx.measureText(testLine);
+                const testWidth = metrics.width;
+                
+                if (testWidth > maxWidth && n > 0) {
+                    lines.push(line);
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line);
+
+            lines.forEach((line, i) => {
+                ctx.fillText(line, x, y + (i * lineHeight));
+            });
+            
+            return lines.length * lineHeight; // Return total height
+        };
+    </script>
+</body>
+</html> 
