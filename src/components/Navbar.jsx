@@ -60,12 +60,10 @@ const Navbar = () => {
           </div>
 
           <button 
-            className={`mobile-menu-btn ${isMobileMenuOpen ? 'open' : ''}`}
+            className="mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span>☰</span>
           </button>
         </div>
       </div>
