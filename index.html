@@ -836,7 +836,7 @@
             );
             padding: 40px;
             border-radius: var(--border-radius);
-            max-width: 900px;
+            max-width: 900px; /* Increased width */
             width: 95%;
             text-align: center;
             box-shadow: var(--shadow-magical);
@@ -2004,6 +2004,1296 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Add this inside the existing <style> tag */
+
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            /* Core layout */
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+
+            /* Navigation */
+            .navbar {
+                height: 60px;
+            }
+
+            .nav-content {
+                padding: 10px 0;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            /* Quiz container */
+            .quiz-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 15px;
+                margin: 0;
+                border-radius: 15px;
+            }
+
+            .quiz-option {
+                padding: 15px;
+                margin: 8px 0;
+            }
+
+            .question-text {
+                font-size: 18px;
+                line-height: 1.4;
+                margin-bottom: 20px;
+            }
+
+            /* Results section */
+            .results-container {
+                padding: 20px;
+            }
+
+            .archetype-title {
+                font-size: 24px;
+            }
+
+            .archetype-description {
+                font-size: 16px;
+            }
+
+            /* Certificate */
+            .certificate-preview {
+                width: 100%;
+                height: auto;
+                margin: 15px 0;
+            }
+
+            /* Modal adjustments */
+            .modal-content {
+                width: 95%;
+                margin: 20px auto;
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+
+            /* Progress bar */
+            .progress-bar {
+                height: 8px;
+                margin: 10px 0;
+            }
+
+            /* Buttons */
+            button {
+                font-size: 16px;
+                padding: 12px 20px;
+                width: 100%;
+                max-width: none;
+            }
+
+            /* Text scaling */
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 18px; }
+            p { font-size: 16px; }
+        }
+
+        /* Small phones */
+        @media screen and (max-width: 375px) {
+            .quiz-container {
+                padding: 10px;
+            }
+
+            .question-text {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 10px 16px;
+            }
+        }
+
+        /* Inside the <style> tag, update the mobile media query */
+        @media screen and (max-width: 768px) {
+            /* Fix overlapping title */
+            .hero-content {
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            /* Adjust title size */
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.2;
+                margin-bottom: 20px;
+                padding: 0 20px;
+            }
+
+            /* Adjust subtitle */
+            .hero-subtitle {
+                font-size: 16px;
+                line-height: 1.5;
+                max-width: 300px;
+                margin: 0 auto 30px;
+                padding: 0 20px;
+            }
+
+            /* Fix button layout */
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                align-items: center;
+            }
+
+            .btn {
+                width: 80%;
+                max-width: 280px;
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+
+            /* Fix navigation */
+            .navbar {
+                height: 60px;
+                background: rgba(255, 248, 240, 0.98);
+            }
+
+            .nav-content {
+                padding: 0 20px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            /* Hide decorative elements */
+            .floating-elements,
+            .custom-cursor,
+            .magical-orbs {
+                display: none;
+            }
+
+            /* Adjust quiz container */
+            .quiz-container {
+                width: 90%;
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            .quiz-option {
+                padding: 15px;
+                margin: 10px 0;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            /* ... existing mobile styles ... */
+
+            /* Quiz journey options scaling */
+            .find-vibe-section {
+                padding: 40px 15px;
+            }
+
+            .journey-options {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .journey-option {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+
+            .journey-option h3 {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            .questions-count {
+                font-size: 12px;
+            }
+        }
+
+        /* Even smaller screens */
+        @media screen and (max-width: 375px) {
+            .journey-options {
+                grid-template-columns: 1fr;
+                max-width: 200px;
+            }
+
+            .journey-option {
+                padding: 12px 8px;
+                font-size: 13px;
+            }
+
+            .journey-option h3 {
+                font-size: 15px;
+            }
+
+            .questions-count {
+                font-size: 11px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            /* ... existing mobile styles ... */
+
+            /* Philosophy quote spacing */
+            .fleurene-philosophy {
+                margin: 40px 0;
+                padding: 30px 20px;
+                text-align: center;
+            }
+
+            .fleurene-philosophy blockquote {
+                font-size: 20px;
+                line-height: 1.4;
+                margin: 0;
+                padding: 20px 0;
+            }
+
+            .fleurene-philosophy cite {
+                font-size: 14px;
+                margin-top: 10px;
+                display: block;
+            }
+
+            /* Add space between quote and images */
+            .fleurene-philosophy + img,
+            img + .fleurene-philosophy {
+                margin-top: 40px;
+            }
+        }
+
+        /* Even smaller screens */
+        @media screen and (max-width: 375px) {
+            .fleurene-philosophy {
+                padding: 20px 15px;
+            }
+
+            .fleurene-philosophy blockquote {
+                font-size: 18px;
+            }
+        }
+
+        /* Add these styles in your <style> section */
+        @media screen and (max-width: 768px) {
+            /* Navigation styles */
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 248, 240, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 25px;
+                box-shadow: 0 10px 30px rgba(177, 156, 217, 0.15);
+                z-index: 1000;
+                animation: fadeIn 0.3s ease-out;
+            }
+
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-link {
+                font-family: var(--font-heading);
+                font-size: 1.1rem;
+                padding: 15px 20px;
+                text-align: center;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                color: var(--text-dark);
+                background: rgba(255, 255, 255, 0.5);
+                border: 1px solid rgba(177, 156, 217, 0.1);
+            }
+
+            .nav-link:hover,
+            .nav-link.active {
+                background: var(--gradient-primary);
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(177, 156, 217, 0.2);
+            }
+
+            /* Hamburger menu button */
+            .menu-toggle {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(177, 156, 217, 0.1);
+                border: none;
+                border-radius: 50%;
+                font-size: 20px;
+                color: var(--primary-lilac);
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .menu-toggle:hover {
+                background: rgba(177, 156, 217, 0.2);
+                transform: scale(1.05);
+            }
+
+            /* Navigation actions */
+            .nav-actions {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid rgba(177, 156, 217, 0.1);
+            }
+
+            .wishlist-btn,
+            .cart-btn {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: white;
+                border: 1px solid rgba(177, 156, 217, 0.2);
+                box-shadow: 0 5px 15px rgba(177, 156, 217, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            .wishlist-btn:hover,
+            .cart-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(177, 156, 217, 0.2);
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        /* Add/update these styles in your <style> section */
+
+        /* Hide menu toggle on desktop */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Desktop navigation */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Mobile styles - only show menu toggle and adjust alignment */
+        @media screen and (max-width: 768px) {
+            .nav-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 60px;
+                padding: 0 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: var(--primary-lilac);
+                padding: 0;
+                cursor: pointer;
+                margin-top: 3px; /* Align with Fleurene */
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 248, 240, 0.98);
+                padding: 20px;
+                box-shadow: 0 4px 20px rgba(177, 156, 217, 0.15);
+            }
+
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Add/update these styles in your <style> section */
+
+        /* Desktop layout */
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Mobile layout adjustments */
+        @media screen and (max-width: 768px) {
+            .hero-content {
+                display: flex;
+                flex-direction: column-reverse; /* This will put the image on top */
+                gap: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .hero-image {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .hero-text {
+                margin-top: 20px;
+            }
+        }
+
+        /* Add these styles to your <style> section */
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-image {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            .hero-image img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        /* Add to your style section */
+        .story-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-lavender) 0%, var(--soft-blush) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 60px 0;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .story-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .typewriter-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin: 40px 0;
+            color: var(--primary-lilac);
+        }
+
+        /* Update the btn-story styles */
+        .btn-story {
+            background: linear-gradient(135deg, #C5B6F0 0%, #B5D0FF 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(197, 182, 240, 0.3);
+        }
+
+        .btn-story:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(181, 208, 255, 0.4);
+            background: linear-gradient(135deg, #B5D0FF 0%, #C5B6F0 100%);
+        }
+
+        .btn-story .btn-sparkle {
+            margin-left: 8px;
+            display: inline-block;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating petals */
+        .floating-petals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .story-text p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+
+            .typewriter-text {
+                font-size: 1.2rem;
+                padding: 0 20px;
+            }
+        }
+
+        /* Add to your style section */
+        .petal {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 150% 0 150% 0;
+            animation: falling linear forwards;
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px rgba(177, 156, 217, 0.3);
+        }
+
+        @keyframes falling {
+            0% {
+                top: -10%;
+                transform: rotate(45deg) translateX(0);
+            }
+            100% {
+                top: 100%;
+                transform: rotate(405deg) translateX(100px);
+            }
+        }
+
+        /* Update typewriter styles */
+        .typewriter {
+            border-right: 2px solid var(--primary-lilac);
+            overflow: hidden;
+            margin: 0 auto;
+            white-space: pre-wrap;
+            max-width: 800px; /* or whatever width you prefer */
+        }
+
+        .section-title.typewriter {
+            display: inline-block;
+            text-align: left;
+            padding-right: 4px;
+        }
+
+        /* Add to your style section */
+        .scene-2 {
+            background: linear-gradient(135deg, var(--soft-blush) 0%, var(--primary-lavender) 100%);
+        }
+
+        .maker-content {
+            padding: 60px 0;
+        }
+
+        .maker-intro p {
+            font-size: 1.4rem;
+            font-family: var(--font-heading);
+            color: var(--primary-lilac);
+            margin-bottom: 40px;
+        }
+
+        .maker-story {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .maker-story p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+
+        /* Add staggered fade-in animation */
+        .maker-content .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .maker-content .fade-in:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .maker-content .fade-in:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 768px) {
+            .maker-intro p {
+                font-size: 1.2rem;
+                padding: 0 20px;
+            }
+
+            .maker-story p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+        }
+
+        /* Add to your style section */
+        .story-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .story-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        /* Update story modal content layout */
+        .story-modal-content {
+            background: linear-gradient(135deg, #fff 0%, #faf6ff 100%);
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 900px;
+            width: 95%;
+            max-height: 85vh;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(177, 156, 217, 0.2);
+            overflow-y: auto;
+            font-family: var(--font-heading);
+            transition: all 0.5s ease;
+        }
+
+        .story-modal.show .story-modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-lilac);
+            cursor: pointer;
+            padding: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.1);
+        }
+
+        .story-chapter {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Add animation for Meet the Maker title */
+        .story-chapter h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: titleFadeIn 1s ease-out forwards;
+            background: linear-gradient(135deg, var(--primary-lilac) 0%, var(--primary-lavender) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: 
+                titleFadeIn 1s ease-out forwards,
+                gradientFlow 8s ease infinite;
+        }
+
+        /* Title animation */
+        @keyframes titleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+
+        /* Update chapter label animation */
+        .chapter-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #C5B6F0 0%, #B5D0FF 100%);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: white;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: 
+                labelFadeIn 0.8s ease-out forwards,
+                labelGlow 2s ease-in-out infinite;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes labelFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes labelGlow {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(197, 182, 240, 0.3);
+                transform: translateY(0);
+            }
+            50% { 
+                box-shadow: 0 0 15px rgba(181, 208, 255, 0.5);
+                transform: translateY(-2px);
+            }
+        }
+
+        .story-chapter h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .story-chapter p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .story-navigation {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .story-chapter {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .story-chapter.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-story-nav {
+            background: linear-gradient(135deg, #C5B6F0 0%, #B5D0FF 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-story-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(177, 156, 217, 0.3);
+        }
+
+        .btn-story-nav span {
+            margin-left: 8px;
+            display: inline-block;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .btn-story-nav.prev span {
+            margin-right: 8px;
+            margin-left: 0;
+        }
+
+        /* Fade transition for chapters */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 768px) {
+            .story-modal-content {
+                padding: 30px 20px;
+            }
+
+            .story-chapter h3 {
+                font-size: 1.8rem;
+            }
+
+            .story-chapter p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Add to your style section */
+        .maker-content-wrapper {
+            display: block; /* Change from flex to block */
+            max-width: 100%; /* Use full width */
+            margin: 0 auto;
+            padding-right: 80px; /* Space for mood selector */
+        }
+
+        /* Update maker text styles */
+        .maker-text {
+            width: 100%; /* Use full width */
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .maker-text p {
+            margin-bottom: 25px;
+            text-align: left;
+            max-width: 100%; /* Use full width */
+        }
+
+        .maker-text p:nth-child(2) { animation-delay: 0.2s; }
+        .maker-text p:nth-child(3) { animation-delay: 0.4s; }
+        .maker-text p:nth-child(4) { animation-delay: 0.6s; }
+        .maker-text p:nth-child(5) { animation-delay: 0.8s; }
+        .maker-text p:nth-child(6) { animation-delay: 1s; }
+        .maker-text p:nth-child(7) { animation-delay: 1.2s; }
+
+        .flower-text {
+            position: relative;
+        }
+
+        .flower-text::after {
+            content: '🌸';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            animation: bloomIn 1s ease-out 0.8s forwards;
+        }
+
+        .signature-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            color: var(--primary-lilac);
+        }
+
+        .mood-panel {
+            width: 200px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .mood-ribbon {
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(
+                to bottom,
+                #ffccd5 0%,
+                #ffd6e0 25%,
+                #c41e3a 50%,
+                #1a1a1a 75%
+            );
+            border-radius: 2px;
+            margin-left: 20px;
+        }
+
+        @keyframes bloomIn {
+            from { opacity: 0; transform: scale(0.8) translateY(-50%); }
+            to { opacity: 1; transform: scale(1) translateY(-50%); }
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 768px) {
+            .maker-content-wrapper {
+                flex-direction: column;
+                padding: 0 10px;
+            }
+            
+            .mood-panel {
+                display: none;
+            }
+            
+            .maker-text {
+                padding-right: 20px;
+                font-size: 1.1rem;
+            }
+            
+            .signature-text {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+        }
+
+        /* Mood selector styles */
+        .mood-selector {
+            position: fixed;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1002;
+        }
+
+        .mood-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .mood-button:hover {
+            transform: scale(1.1);
+            opacity: 1;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Mood colors and flowers */
+        .mood-dreamy {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            animation: dreamyFlow 8s ease infinite;
+            background-size: 200% 200%; /* Reduced size for more visible movement */
+        }
+        .mood-dreamy::before {
+            content: '🌸';
+        }
+
+        .mood-peaceful {
+            background: linear-gradient(135deg, #E3FDF5 0%, #FFE6FA 100%);
+            animation: peacefulFlow 8s ease infinite;
+            background-size: 200% 200%;
+        }
+        .mood-peaceful::before {
+            content: '🌷';
+        }
+
+        .mood-passionate {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            animation: passionateFlow 8s ease infinite;
+            background-size: 200% 200%;
+        }
+        .mood-passionate::before {
+            content: '🌹';
+        }
+
+        /* Update the mysterious mood gradient */
+        .mood-mysterious {
+            background: linear-gradient(135deg, #c9f0f2 0%, #b8d5ff 100%);
+            animation: mysteriousFlow 8s ease infinite;
+            background-size: 200% 200%;
+        }
+        .mood-mysterious::before {
+            content: '🌺';
+        }
+
+        /* Hover effects */
+        .mood-button:hover {
+            transform: scale(1.1);
+            opacity: 1;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 768px) {
+            .mood-selector {
+                right: 20px;
+            }
+
+            .mood-button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Gradient animations */
+        @keyframes dreamyFlow {
+            0% { background-position: 0% 0% }
+            25% { background-position: 100% 0% }
+            50% { background-position: 100% 100% }
+            75% { background-position: 0% 100% }
+            100% { background-position: 0% 0% }
+        }
+
+        @keyframes peacefulFlow {
+            0% { background-position: 0% 0% }
+            50% { background-position: 100% 100% }
+            100% { background-position: 0% 0% }
+        }
+
+        @keyframes passionateFlow {
+            0% { background-position: 100% 0% }
+            25% { background-position: 0% 50% }
+            50% { background-position: 0% 100% }
+            75% { background-position: 100% 50% }
+            100% { background-position: 100% 0% }
+        }
+
+        @keyframes mysteriousFlow {
+            0% { background-position: 0% 50% }
+            25% { background-position: 50% 100% }
+            50% { background-position: 100% 50% }
+            75% { background-position: 50% 0% }
+            100% { background-position: 0% 50% }
+        }
+
+        /* Add floating elements to the backgrounds */
+        .mood-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            opacity: 0.3;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Add hover effects for text */
+        .maker-text p {
+            transition: transform 0.3s ease;
+        }
+
+        .maker-text p:hover {
+            transform: translateX(10px);
+        }
+
+        /* Update mobile styles for story modal */
+        @media screen and (max-width: 768px) {
+            .story-modal-content {
+                padding: 30px 20px;
+                padding-right: 45px; /* Reduced from 60px */
+            }
+
+            .maker-text {
+                padding-right: 25px; /* Reduced from 40px */
+                font-size: 1.1rem;
+            }
+
+            .mood-selector {
+                right: 10px; /* Moved closer to edge */
+            }
+
+            .mood-button {
+                width: 32px; /* Slightly smaller */
+                height: 32px;
+                font-size: 1rem;
+            }
+
+            /* Adjust navigation buttons */
+            .story-navigation {
+                padding-right: 25px; /* Match text padding */
+            }
+        }
+
+        /* Extra small devices */
+        @media screen and (max-width: 375px) {
+            .story-modal-content {
+                padding-right: 40px;
+            }
+
+            .maker-text {
+                padding-right: 20px;
+            }
+
+            .mood-button {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Style for The Bloom text */
+        .bloom-text {
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+
+        .bloom-text p {
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+            transition: all 0.3s ease;
+            cursor: default;
+            position: relative;
+            padding-left: 0;
+        }
+
+        /* Special style for the last line */
+        .bloom-text p:last-child {
+            background: linear-gradient(135deg, #C5B6F0 0%, #B5D0FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.3rem;
+            font-family: var(--font-heading);
+            animation: 
+                fadeIn 0.8s ease-out forwards,
+                gradientFlow 8s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        /* Add hover effect without disrupting the gradient */
+        .bloom-text p:last-child:hover {
+            transform: translateX(10px) !important;
+            padding-left: 10px;
+            opacity: 0.9;
+        }
+
+        /* Add staggered animations for each paragraph */
+        .bloom-text p:nth-child(1) { animation-delay: 0.1s; }
+        .bloom-text p:nth-child(2) { animation-delay: 0.3s; }
+        .bloom-text p:nth-child(3) { animation-delay: 0.5s; }
+        .bloom-text p:nth-child(4) { animation-delay: 0.7s; }
+
+        /* Update hover effect */
+        .bloom-text p:hover {
+            transform: translateX(10px) !important;
+            padding-left: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -2029,21 +3319,23 @@
                     <span class="logo-tagline">✨</span>
                 </a>
 
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
                 <div class="nav-links">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link">Shop</a>
-                    <a href="#" class="nav-link">The Story</a>
-                    <a href="#quiz-section" class="nav-link" onclick="scrollToQuiz(event)">Find Your Vibe</a>
-                    <a href="#" class="nav-link">Journal</a>
-                    <a href="#" class="nav-link">Contact</a>
-                    <a href="#" class="nav-link">Gifting</a>
+                    <a href="#" class="nav-link active" onclick="closeMenu()">Home</a>
+                    <a href="#" class="nav-link" onclick="closeMenu()">Shop</a>
+                    <a href="#" class="nav-link" onclick="closeMenu()">The Story</a>
+                    <a href="#quiz-section" class="nav-link" onclick="scrollToQuiz(event); closeMenu()">Find Your Vibe</a>
+                    <a href="#" class="nav-link" onclick="closeMenu()">Journal</a>
+                    <a href="#" class="nav-link" onclick="closeMenu()">Contact</a>
+                    <a href="#" class="nav-link" onclick="closeMenu()">Gifting</a>
                     
                     <div class="nav-actions">
-                        <button class="wishlist-btn" title="My Treasure Box" onclick="showModal('wishlist')">
+                        <button class="wishlist-btn" title="My Treasure Box">
                             <span class="heart-icon">♡</span>
                             <span class="wishlist-count">3</span>
                         </button>
-                        <button class="cart-btn" title="Shopping Bag" onclick="showModal('cart')">
+                        <button class="cart-btn" title="Shopping Bag">
                             <span class="bag-icon">🛍️</span>
                             <span class="cart-count">2</span>
                         </button>
@@ -2076,21 +3368,33 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="image-container">
-                        <img 
-                            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=700&fit=crop&crop=center" 
-                            alt="Delicate bracelet sparkling in dappled sunlight"
-                            class="hero-img"
-                        />
-                        <div class="image-overlay">
-                            <div class="sparkle sparkle-1">✨</div>
-                            <div class="sparkle sparkle-2">✨</div>
-                            <div class="sparkle sparkle-3">✨</div>
-                        </div>
-                    </div>
+                    <img src="src/assets/images/topdesign.png" alt="Fleurene Jewelry Design" />
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Add this after your hero section -->
+    <section class="story-section scene-1">
+        <div class="container">
+            <div class="story-content">
+                <h2 class="section-title typewriter">You've entered the world of Fleurene — and I'm so happy you're here.</h2>
+                
+                <div class="story-text">
+                    <p class="fade-in">Welcome to a space where your personality gets to sparkle. This isn't just a shop. It's a little mood sanctuary stitched in shimmer. Everything here is meant to reflect something in you — a thought, a vibe, a daydream.</p>
+                </div>
+
+                <div class="typewriter-text">
+                    <p>It's not just jewellery. It's your personality, in sparkles.</p>
+                </div>
+
+                <button class="btn btn-story pulse">
+                    Start the Story
+                    <span class="btn-sparkle">🌸</span>
+                </button>
+            </div>
+        </div>
+        <div class="floating-petals"></div>
     </section>
 
     <!-- Magic Quote -->
@@ -2221,6 +3525,65 @@
             <button class="close-modal" onclick="closeModal()">&times;</button>
             <div id="modal-body">
                 <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this before closing body tag -->
+    <div id="story-modal" class="story-modal">
+        <!-- Move mood selector inside the modal -->
+        <div class="mood-selector">
+            <button class="mood-button mood-dreamy" data-mood="Dreamy & Soft" onclick="changeMood('dreamy')"></button>
+            <button class="mood-button mood-peaceful" data-mood="Peaceful & Light" onclick="changeMood('peaceful')"></button>
+            <button class="mood-button mood-passionate" data-mood="Passionate & Warm" onclick="changeMood('passionate')"></button>
+            <button class="mood-button mood-mysterious" data-mood="Mysterious & Deep" onclick="changeMood('mysterious')"></button>
+        </div>
+        
+        <div class="story-modal-content">
+            <button class="close-modal">×</button>
+            <div class="story-modal-body">
+                <!-- Chapter 1: Meet the Maker -->
+                <div class="story-chapter" id="chapter1">
+                    <span class="chapter-label">Opening Bud</span>
+                    <h3>Meet the Maker</h3>
+                    <div class="maker-text">
+                        <p>Hi, I'm Shereen — part analyst, full-time dreamer, and the sentimental heart behind Fleurene.</p>
+                        
+                        <p>I've always felt things a little too much — and honestly, I wouldn't have it any other way. I believe moods deserve outfits, and feelings deserve accessories. On bubbly, sunshiney days, I reach for pinks and pastels and daisy beads that giggle with me. On deeper, introspective days, it's deep reds and smoky blacks — a bit more serious, a bit more grounded.</p>
+                        
+                        <p>Jewelry, for me, is never just decoration. It's expression. It's memory. It's therapy with sparkle.</p>
+                        
+                        <p>And flowers? They've always spoken to me. I love them — their softness, their symbolism, their quiet drama. There's something about a blooming petal that feels like an emotion in motion. That's why I've always resonated so deeply with floral-inspired jewelry. It feels alive — like it's blooming on you.</p>
+                        
+                        <p>Fleurene began because I couldn't find pieces that felt like me — not just the me I was every day, but the different versions of me that showed up depending on how I felt. And if I felt that way, I knew others did too.</p>
+                        
+                        <p>So I started creating them. Little floral fantasies, moody sparkle spells, and dainty tokens of joy — handmade with intention, emotion, and a lot of heart.</p>
+                        
+                        <p>Fleurene is my creative rebellion — a gentle place where soft meets strong, logic meets whimsy, and jewelry tells your story back to you.</p>
+                    </div>
+                    <div class="story-navigation">
+                        <button class="btn-story-nav next" onclick="showChapter(2)">Step into the Bloom <span>🌸</span></button>
+                    </div>
+                </div>
+
+                <!-- Chapter 2: The Bloom -->
+                <div class="story-chapter" id="chapter2" style="display: none;">
+                    <span class="chapter-label">Blossom Phase</span>
+                    <h3>The Bloom</h3>
+                    <div class="bloom-text">
+                        <p>"Fleur" means flower — and Fleurene is my personal garden. Now it's yours too.</p>
+                        
+                        <p>This is a space for hopeless romantics, overthinkers, sentimental souls, and anyone who wants to wear their heart — and mood — on their sleeve. It's a garden for growing your aesthetic, whatever season you're in.</p>
+                        
+                        <p>Whether you're in full bloom or just watering the roots — there's something here for you.</p>
+                        
+                        <p>Come as you are. Leave a little sparklier.</p>
+                    </div>
+                    <div class="story-navigation">
+                        <button class="btn-story-nav prev" onclick="showChapter(1)"><span>🌸</span> Previous Chapter</button>
+                        <button class="btn-story-nav next" onclick="closeStoryModal()">Begin Your Journey <span>🌸</span></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -3263,13 +4626,13 @@
                                 color: var(--primary-lavender);
                                 cursor: pointer;
                                 font-family: var(--font-heading);
-                                font-size: 0.9rem;
+            font-size: 0.9rem;
                                 padding: 8px 12px;
                                 display: inline-flex;
                                 align-items: center;
                                 gap: 6px;
                                 margin-right: 10px;
-                                transition: all 0.3s ease;
+            transition: all 0.3s ease;
                                 opacity: 0.8;
                                 vertical-align: middle;
                             ">
@@ -3934,6 +5297,181 @@
                     block: 'start'
                 });
             }
+        }
+
+        // Add this to your existing JavaScript
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+
+        function closeMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.remove('show');
+        }
+
+        // Add click event listeners to all nav links
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+
+        // Add this to your JavaScript section
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = Math.random() * 5 + 4 + 's'; // Slower animation (4-9 seconds)
+            petal.style.opacity = Math.random() * 0.2 + 0.1; // More transparent (0.1-0.3 opacity)
+            document.querySelector('.floating-petals').appendChild(petal);
+            
+            // Remove petal after animation
+            setTimeout(() => {
+                petal.remove();
+            }, 9000); // Increased timeout to match longer animation
+        }
+
+        function startPetalAnimation() {
+            setInterval(createPetal, 800); // Reduced frequency of petal creation
+        }
+
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            // Store the original text and clear the element
+            const originalText = text.trim();
+            element.innerHTML = '';
+            element.style.whiteSpace = 'pre-wrap'; // This will preserve line breaks
+            
+            function type() {
+                if (i < originalText.length) {
+                    element.innerHTML += originalText.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    // Remove the blinking cursor when done
+                    element.style.borderRight = 'none';
+                }
+            }
+            type();
+        }
+
+        // Initialize animations when document loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start petal animation
+            startPetalAnimation();
+            
+            // Start typewriter effect
+            const typewriterElement = document.querySelector('.typewriter');
+            if (typewriterElement) {
+                const text = typewriterElement.textContent; // Use textContent instead of innerHTML
+                typewriterElement.style.whiteSpace = 'pre-wrap'; // Preserve formatting
+                typeWriter(typewriterElement, text);
+            }
+        });
+
+        // Add to your JavaScript section
+        function showStoryModal() {
+            const modal = document.getElementById('story-modal');
+            modal.classList.add('show');
+            showChapter(1); // Start with chapter 1
+        }
+
+        function closeStoryModal() {
+            const modal = document.getElementById('story-modal');
+            modal.classList.remove('show');
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const storyBtn = document.querySelector('.btn-story');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            storyBtn.addEventListener('click', showStoryModal);
+            closeBtn.addEventListener('click', closeStoryModal);
+            
+            // Close modal when clicking outside
+            document.getElementById('story-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeStoryModal();
+                }
+            });
+        });
+
+        function showChapter(num) {
+            const chapters = document.querySelectorAll('.story-chapter');
+            chapters.forEach(chapter => {
+                chapter.style.display = 'none';
+                chapter.classList.remove('active');
+            });
+            
+            const currentChapter = document.getElementById(`chapter${num}`);
+            currentChapter.style.display = 'block';
+            
+            // Trigger reflow for animation
+            setTimeout(() => {
+                currentChapter.classList.add('active');
+            }, 10);
+        }
+
+        function changeMood(mood) {
+            const modalContent = document.querySelector('.story-modal-content');
+            
+            // Remove existing particles
+            const oldParticles = modalContent.querySelector('.mood-particles');
+            if (oldParticles) oldParticles.remove();
+            
+            // Create new particles container
+            const particles = document.createElement('div');
+            particles.className = 'mood-particles';
+            
+            // Add particles based on mood
+            const particleCount = 15;
+            const colors = getMoodColors(mood);
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.width = `${Math.random() * 20 + 10}px`;
+                particle.style.height = particle.style.width;
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particles.appendChild(particle);
+            }
+            
+            modalContent.appendChild(particles);
+            
+            // Remove all existing mood classes
+            modalContent.classList.remove('mood-dreamy', 'mood-peaceful', 'mood-passionate', 'mood-mysterious');
+            
+            // Add the selected mood class
+            modalContent.classList.add(`mood-${mood}`);
+            
+            // Update text color
+            modalContent.style.color = 'var(--text-dark)';
+            
+            // Update background with the corresponding gradient
+            const gradients = {
+                dreamy: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
+                peaceful: 'linear-gradient(135deg, #E3FDF5 0%, #FFE6FA 100%)',
+                passionate: 'linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)',
+                mysterious: 'linear-gradient(135deg, #c9f0f2 0%, #b8d5ff 100%)' // Updated to lighter pastel colors
+            };
+            
+            modalContent.style.background = gradients[mood];
+        }
+
+        function getMoodColors(mood) {
+            const colors = {
+                dreamy: ['#e0c3fc', '#8ec5fc', '#d4a5ff'],
+                peaceful: ['#E3FDF5', '#FFE6FA', '#f0fff4'],
+                passionate: ['#ff9a9e', '#fad0c4', '#ffb7b7'],
+                mysterious: ['#c9f0f2', '#b8d5ff', '#d4e8ff'] // Updated to lighter pastel colors
+            };
+            return colors[mood];
         }
     </script>
 </body>
